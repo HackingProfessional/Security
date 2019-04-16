@@ -16,7 +16,7 @@ Vamos a iniciar explicando que es Mimikatz.
 Mimikatz es una herramienta hecha en lenguaje C por Benjamin Delpy.  
 Su funcion principal es extraer contraseñas en texto plano, hashes y tickets de Kerberos (protocolo de autenticación) desde la memoria.  
 
-[Descargar Mimikatz](https://github.com/gentilkiwi/mimikatz/releases){: .btn .btn_success}  
+[Descargar Mimikatz](https://github.com/gentilkiwi/mimikatz/releases){: .btn}  
 
 Mimikatz esta disponible tanto como para la arquitectura de 32 bits y tambien para los equipos de 64 bits.
 
