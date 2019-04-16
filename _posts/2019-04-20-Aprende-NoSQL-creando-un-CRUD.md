@@ -155,14 +155,14 @@ MongoDB tambien nos permite realizar busquedas mas precisas con el uso de operad
 #### Comparativos
 | Nombre           | Descripcion                                                                 |
 | --------         | ------------------------------------------------------------------          |
-| [$eq](https://docs.mongodb.com/manual/reference/operator/query/eq)         | Coincide con valores que son iguales a un valor especificado.               |
-| [$gt](https://docs.mongodb.com/manual/reference/operator/query/gt)         | Coincide con los valores que son mayores que un valor especificado.         |
-| [$gte](https://docs.mongodb.com/manual/reference/operator/query/gte)        | Coincide con los valores que son mayores o iguales a un valor especificado. |
-| [$in](https://docs.mongodb.com/manual/reference/operator/query/in)         | Coincide con cualquiera de los valores especificados en una matriz.         |
-| [$lt](https://docs.mongodb.com/manual/reference/operator/query/lt)         | Coincide con valores que son menores que un valor especificado.             |
-| [$lte](https://docs.mongodb.com/manual/reference/operator/query/lte)        | Coincide con valores que son menores o iguales a un valor especificado.     |
-| [$ne](https://docs.mongodb.com/manual/reference/operator/query/ne)         | Coincide con todos los valores que no son iguales a un valor especificado.  |
-| [$nin](https://docs.mongodb.com/manual/reference/operator/query/nin)        | No coincide con ninguno de los valores especificados en una matriz.         |
+| [$eq](#)         | Coincide con valores que son iguales a un valor especificado.               |
+| [$gt](#)         | Coincide con los valores que son mayores que un valor especificado.         |
+| [$gte](#)        | Coincide con los valores que son mayores o iguales a un valor especificado. |
+| [$in](#)         | Coincide con cualquiera de los valores especificados en una matriz.         |
+| [$lt](#)         | Coincide con valores que son menores que un valor especificado.             |
+| [$lte](#)        | Coincide con valores que son menores o iguales a un valor especificado.     |
+| [$ne](#)         | Coincide con todos los valores que no son iguales a un valor especificado.  |
+| [$nin](#)        | No coincide con ninguno de los valores especificados en una matriz.         |
 
 #### Logicos
 | Nombre           | Descripcion                                                          |
