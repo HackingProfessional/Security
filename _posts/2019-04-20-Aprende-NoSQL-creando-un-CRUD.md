@@ -152,7 +152,8 @@ MongoDB shell version v4.0.8
 MongoDB tambien nos permite realizar busquedas mas precisas con el uso de operadores, los cuales son:  
 
 #### Operadores de consultas
-#### Comparativos
+#### Comparativos  
+
 | Nombre           | Descripcion                                                                 |
 | --------         | ------------------------------------------------------------------          |
 | [$eq](#)         | Coincide con valores que son iguales a un valor especificado.               |
@@ -162,9 +163,10 @@ MongoDB tambien nos permite realizar busquedas mas precisas con el uso de operad
 | [$lt](#)         | Coincide con valores que son menores que un valor especificado.             |
 | [$lte](#)        | Coincide con valores que son menores o iguales a un valor especificado.     |
 | [$ne](#)         | Coincide con todos los valores que no son iguales a un valor especificado.  |
-| [$nin](#)        | No coincide con ninguno de los valores especificados en una matriz.         |
+| [$nin](#)        | No coincide con ninguno de los valores especificados en una matri..         |
 
-#### Logicos
+#### Logicos  
+
 | Nombre           | Descripcion                                                          |
 | --------         | ------------------------------------------------------------------   |
 | [$and](https://docs.mongodb.com/manual/reference/operator/query/and)        | Devuelve todos los objetos si todas las expresiones son verdaderas.  |
