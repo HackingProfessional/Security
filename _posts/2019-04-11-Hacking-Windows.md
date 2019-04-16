@@ -5,7 +5,7 @@ excerpt: "Obteniendo la contraseña de administrador de Windows 7"
 image: "https://hackingprofessional.github.io/Security/images/Mimikatz.jpg"
 tags: 
   - Hacking Windows.
-  - Hacking from 0
+  - Hacking desde 0
   - Mimikatz
 ---
 
