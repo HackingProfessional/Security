@@ -89,6 +89,16 @@ switched to db db_Atenea
 Una vez creada la base de datos, es necesario crear una **coleccion** para almacenarlos.  
 Una coleccion es una entidad que contiene un conjunto de objetos JSON.  
 
+Nuestra coleccion traera la siguiente informacion:
+
+<figure>
+  <img src="https://hackingprofessional.github.io/Security/images/User1Json.png" width="40%" height="55%">
+	<figcaption>
+    <a href="https://hackingprofessional.github.io/Security/Aprende-NoSQL-creando-un-CRUD" title="Coleccion de datos a guardar">Coleccion de datos a guardar</a>.
+  </figcaption>
+</figure>
+
+
 ```js
 -----------------------------
 MongoDB shell version v4.0.8
