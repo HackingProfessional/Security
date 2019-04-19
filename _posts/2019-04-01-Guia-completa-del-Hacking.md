@@ -142,7 +142,7 @@ QUIT
 ```  
 
 **Archivos de configuracion relacionados a SMTP**  
-sendmail.cf
+sendmail.cf  
 submit.cf  
 
 ## Enumerando un sitio WEB
