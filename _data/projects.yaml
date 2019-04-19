@@ -1,3 +1,8 @@
+- title: <b> Learn Hacking with HackTheBox </b>
+  url: https://hackingprofessional.github.io/HTB
+  image: https://hackingprofessional.github.io/Security/images/hackthebox.jpg
+  completed: true
+
 - title: <b>Hacking con NodeJS </b>
   url: https://hackingprofessional.github.io/Security/NodeJS
   image: https://hackingprofessional.github.io/Security/images/nodejs.jpg
@@ -7,8 +12,3 @@
   url: https://hackingprofessional.github.io/Security/Phising-desde-0
   image: https://hackingprofessional.github.io/Security/images/phising.jpg
   completed: false
-
-- title: <b> Write-Ups HackTheBox </b>
-  url: https://hackingprofessional.github.io/HTB
-  image: https://hackingprofessional.github.io/Security/images/hackthebox.jpg
-  completed: true
