@@ -18,30 +18,30 @@ Debido al gran contenido que abarca la seguridad informatica, este post esta en 
 
 ## Tabla de contenido
 
-**[Enumeracion Inicial](#Enumeracion-Inicial)**<br>
+**[Enumeracion Inicial](#enumeracion-inicial)**<br>
 **[Enumerando el servicio FTP (Puerto 21)](#enumerando-ftp)**<br>
 **[Enumerando el servicio SSH (Puerto 22)](#enumerando-ssh)**<br>
-**[Enumerando el servicio SMTP (Puerto 25)](#Enumerando-SMTP)**<br>
-**[Enumerando servicios WEB (Puerto 80/443)](#Enumerando-un-sitio-WEB)**<br>
-**[Enumerando el servicio SMB (Puerto 139/445)](#Enumerando-SMB)**<br>
-**[Enumerando el servicio Finger (Puerto 79)](#Enumerando-Finger)**<br>
-**[Enumerando el servicio POP3 (Puerto 110)](#Enumerando-POP3)**<br>
-**[Enumerando el protocolo RPCBind (Puerto 111)](#Enumerando-RPCBind)**<br>
-**[Enumerando el servicio SNMP (Puerto 161)](#Enumerando-SNMP)**<br>
-**[Enumerando MySQL](#Enumerando-MySQL)**<br>
-**[Enumerando Oracle](#Enumerando-Oracle)**<br>
-**[SQL Injections](#SQLInjections)**<br>
-**[Realizando transferencias de zonas DNS](#DSN-Zone-Transfers)**<br>
-**[Montando Sistemas de archivos compartidos](#Mounting-File-Shares)**<br>
-**[Tecnicas de Fingerprinting](#Tecnicas-de-Fingerprinting)**<br>
-**[Realizando busqueda de Exploits](#Busqueda-de-Exploits)**<br>
-**[Como compilar Exploits](#Compilando-Exploits)**<br>
-**[Sniffeando Trafico](#Sniffer-Trafic)**<br>
-**[Crackeando Contraseñas](#Password-Cracking)**<br>
-**[Realizando Ataques de fuerza bruta](#Bruteforcing)**<br>
-**[Generacion de shell inversas](#Shell-Reverse)**<br>
-**[Obteniendo Shell TTY interactiva](#Obtener-Shell-TTY-interactiva)**<br>
-**[Aprendiendo a usar Metasploit](#Metasploit)**<br>
+**[Enumerando el servicio SMTP (Puerto 25)](#enumerando-smtp)**<br>
+**[Enumerando servicios WEB (Puerto 80/443)](#enumerando-un-sitio-web)**<br>
+**[Enumerando el servicio SMB (Puerto 139/445)](#enumerando-smb)**<br>
+**[Enumerando el servicio Finger (Puerto 79)](#enumerando-finger)**<br>
+**[Enumerando el servicio POP3 (Puerto 110)](#enumerando-pop3)**<br>
+**[Enumerando el protocolo RPCBind (Puerto 111)](#enumerando-rpcbind)**<br>
+**[Enumerando el servicio SNMP (Puerto 161)](#enumerando-snmp)**<br>
+**[Enumerando MySQL](#enumerando-mysql)**<br>
+**[Enumerando Oracle](#enumerando-oracle)**<br>
+**[SQL Injections](#sqlinjections)**<br>
+**[Realizando transferencias de zonas DNS](#dns-zone-transfers)**<br>
+**[Montando Sistemas de archivos compartidos](#montando-recursos-compartidos)**<br>
+**[Tecnicas de Fingerprinting](#tecnicas-de-fingerprinting)**<br>
+**[Realizando busqueda de Exploits](#busqueda-de-exploits)**<br>
+**[Como compilar Exploits](#compilando-exploits)**<br>
+**[Sniffeando Trafico](#sniffer-trafic)**<br>
+**[Crackeando Contraseñas](#password-cracking)**<br>
+**[Realizando Ataques de fuerza bruta](#bruteforcing)**<br>
+**[Generacion de shell inversas](#shell-reverse)**<br>
+**[Obteniendo Shell TTY interactiva](#obtener-shell-tty-interactiva)**<br>
+**[Aprendiendo a usar Metasploit](#metasploit)**<br>
 
 
 ## Hacking Desde 0
@@ -411,7 +411,7 @@ admin'/*
 sqlmap -u "http://meh.com/meh.php?id=1" --dbms=mysql --tech=U --random-agent --dump
 ```  
 
-## DSN Zone Transfers
+## DNS Zone Transfers
 
 ```  
 nslookup -> set type=any -> ls -d blah.com
@@ -431,7 +431,7 @@ dnsrecon -d TARGET -D /usr/share/wordlists/dnsmap.txt -t std --xml ouput.xml
 dnsenum --noreverse -o mydomain.xml example.com
 ```  
 
-## Mounting File Shares
+## Montando recursos compartidos
 
 ```  
 showmount -e IPADDR
