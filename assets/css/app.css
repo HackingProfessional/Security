@@ -2,11 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Raleway";
-    background-color: #e6e6e6;
-}
-
 .card {
     width: 400px;
     margin: 75px auto 0;
