@@ -43,7 +43,7 @@ Processing triggers for desktop-file-utils (0.23-4) ...
 Despues para inicializar forticlient, realizamos una busqueda en el sistema y lo ejecutamos:  
 
 <figure>
-  <img src="https://hackingprofessional.github.io/Security/images/SearchForticlient.png.png" width="40%" height="55%">
+  <img src="https://hackingprofessional.github.io/Security/images/SearchForticlient.png" width="40%" height="55%">
 	<figcaption>
     <a href="https://hackingprofessional.github.io/Security/Como-instalar-forticlient-para-linux" title="Buscando Forticlient en el sistema">Buscando Forticlient en el sistema</a>.
   </figcaption>
