@@ -92,31 +92,3 @@ A continuacion, realizo una peticion a un recurso que hace parte de la VPN.
   </figcaption>
 </figure>
 
-
-<div class="card">
-        <div class="card-header">
-            <img src="./images/profile.jpeg" alt="Profile Image" class="profile-img">
-        </div>
-        <div class="card-body">
-            <p class="full-name">Alan Cooper</p>
-            <p class="username">@alancooper</p>
-            <p class="city">New York</p>
-            <p class="desc">Full stack developer, avid reader, love to take a long walk, swim.</p>
-            <p>
-                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon tumblr"><i class="fab fa-tumblr"></i></a>
-                <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon google-plus"><i class="fab fa-google-plus"></i></a>
-            </p>
-        </div>
-        <div class="card-footer">
-            <div class="col vr">
-                <p><span class="count">1.8K</span> Followers</p>
-            </div>
-            <div class="col">
-                <p><span class="count">2.0K</span> Following</p>
-            </div>
-        </div>
-    </div>
