@@ -1,11 +1,4 @@
-body{
-	margin:0;
-	color:#444;
-	overflow:hidden;
-	font:300 16px/18px Roboto, sans-serif;
-	background:url(http://ramonmr.com/wp-content/uploads/2015/05/Google-Material-Design-Wallpaper.jpg) #031b21 no-repeat center fixed;
-	background-size:cover;
-}
+
 *,:after,:before{box-sizing:border-box}
 .pull-left{float:left}
 .pull-right{float:right}
