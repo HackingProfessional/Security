@@ -10,9 +10,9 @@ tags:
 ---
 
 Hello Hackers!!  
-En este artículo, aprenderemos acerca de una rama importante de la informatica llamada Criptografia, con ella lograremos evitar que nuestra información caiga en las manos equivocadas.  
+En este artículo, aprenderemos acerca de una rama importante de la informatica llamada Criptografia, con ella lograremos evitar que nuestra información caiga en manos equivocadas.  
 La información juega un papel vital en el funcionamiento de negocios, organizaciones, operaciones militares, etc. La información en las manos equivocadas puede llevar a la pérdida de negocios o resultados catastróficos. Para asegurar la comunicación, una empresa puede usar la criptografía para cifrar la información.  
-La criptografía en pocas palabras es transformar la información en un formato legible no humano y viceversa.  
+La criptografía en pocas palabras es transformar la información en un formato ilegible no humano y viceversa.  
 
 
 ## ¿Qué es la criptografía?
@@ -33,18 +33,16 @@ A continuacion, muestra cómo se realiza la transformación.
 
 El proceso de transformación de la información en una forma ilegible no humana se llama **encriptación**.  
 El proceso de revertir el cifrado se llama **descifrado**.  
-
-El descifrado se realiza mediante una clave secreta que solo conocen los destinatarios legítimos de la información. La clave se utiliza para descifrar los mensajes ocultos. Esto hace que la comunicación sea segura porque incluso si el atacante logra obtener la información, no tendrá sentido para ellos.  
 La información encriptada se conoce como **cifrado**.  
 
 ## ¿Qué es el criptoanalisis?  
 El análisis criptográfico es el arte de tratar de descifrar los mensajes cifrados sin el uso de la clave que se utilizó para cifrar los mensajes. El criptoanálisis utiliza algoritmos y análisis matemáticos para descifrar algun texto cifrado.  
 
 El éxito de un ataques de criptoanálisis depende:  
-	- Potencia de cómputo disponible
+	- Potencia de cómputo disponible  
 	- Cantidad de tiempo disponible
 
-La siguiente es una lista de los ataques de Criptoanalysis comúnmente utilizados:  
+La siguiente es una lista de los ataques de Criptoanalisis comúnmente utilizados:  
 
 **Ataque de diccionario**: Este tipo de ataque usa una lista de palabras para encontrar una coincidencia del texto sin formato o la clave. Se utiliza principalmente cuando se intentan descifrar contraseñas cifradas.   
 
@@ -53,10 +51,10 @@ La siguiente es una lista de los ataques de Criptoanalysis comúnmente utilizado
 **Ataque de tabla arco iris**: este tipo de ataque compara el texto cifrado con los hashes precalculados para encontrar coincidencias.
 
 ## Que es el cifrado Simetrico
-El cifrado simétrico, también conocido como “Shared Key” o “Shared Secret”, es aquel en donde se utiliza una sola llave para cifrar y descifrar la información.
-**Ejemplo**
-Si un *usuario A* quiere enviarle un mensaje X al *usuario B*, este utiliza la llave **"SecurePassword"** para cifrar la información.  
-Si el usuario B desea descifrar ña informacion debe utilizar la misma llave que utilizo el *usuario A*, el cual es: **"SecurePassword"**.  
+El cifrado simétrico, también conocido como “Shared Key” o “Shared Secret”, es aquel en donde se utiliza una sola llave para cifrar y descifrar la información.  
+**Ejemplo**  
+Si un **usuario A** quiere enviarle un **mensaje X** al **usuario B**, y para ello utiliza la llave **"SecurePassword"** para cifrar la información.  
+Para que el **usuario B** pueda descifrar la informacion debe utilizar la misma llave que utilizo el **usuario A**, el cual es: **"SecurePassword"**.  
 Entre los algoritmos de cifrado simétricos podemos mencionar AES, 3DES, DES y RC4.  
 Los algoritmos 3DES y AES son utilizados comúnmente por el protocolo IPSEC para establecer conexiones de VPN. El algoritmo RC4 es utilizado en tecnologías de redes inalámbricas para el cifrado de información en los protocolos de seguridad WEP y WPA version 1.  
 
