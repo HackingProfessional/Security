@@ -71,7 +71,7 @@ También conocido como **"Criptografía de Llave Pública"**, Este emplea dos ll
 
 ## Que es el Hashing
 
-El Hashing es una función matemática que no tiene inversa y produce un resultado de longitud fija. A diferencia de la función de cifrado que se utiliza para garantizar la confidencialidad de la información, la función de hashing es utilizada en seguridad para garantizar la integridad de la información.
+El Hashing es una función matemática que no tiene inversa y produce un resultado de longitud fija. A diferencia de la función de cifrado que se utiliza para garantizar la **confidencialidad** de la información, la función de hashing es utilizada en seguridad para garantizar la **integridad** de la información.
 
 ### Tres pilares de la seguridad informatica
 
@@ -83,7 +83,7 @@ La gestión de la información se establece gracias a los siguientes tres pilare
 
 **La disponibilidad**, su objetivo es prevenir interrupciones no autorizadas de los recursos informáticos.  
 
-MD5 y SHA-1 son los principalmente algoritmos de hashing empleados hoy en día.  
+Hoy en día los algoritmos de hashing principalmente empleados son MD5 y SHA-1.    
 El **Hash** es un grupo de caracteres alfanuméricos, el cual es el resultado de aplicarle la función de hashing a un mensaje o archivo para comprobar la autenticidad.  
 
 ## Glosario 
