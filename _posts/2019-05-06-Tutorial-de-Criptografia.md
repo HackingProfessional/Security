@@ -56,15 +56,16 @@ El cifrado simétrico, también conocido como “Shared Key” o “Shared Secre
 Si un **usuario A** quiere enviarle un **mensaje X** al **usuario B**, y para ello utiliza la llave **"SecurePassword"** para cifrar la información.  
 Para que el **usuario B** pueda descifrar la informacion debe utilizar la misma llave que utilizo el **usuario A**, el cual es: **"SecurePassword"**.  
 Entre los algoritmos de cifrado simétricos podemos mencionar AES, 3DES, DES y RC4.  
-Los algoritmos 3DES y AES son utilizados comúnmente por el protocolo IPSEC para establecer conexiones de VPN. El algoritmo RC4 es utilizado en tecnologías de redes inalámbricas para el cifrado de información en los protocolos de seguridad WEP y WPA version 1.  
+Los algoritmos 3DES y AES son utilizados comúnmente por el protocolo IPSEC para establecer conexiones de VPN.  
+El algoritmo RC4 es utilizado en tecnologías de redes inalámbricas para el cifrado de información en los protocolos de seguridad WEP y WPA version 1.  
 
 ## Que es el cifrado asimetrico 
 También conocido como **"Criptografía de Llave Pública"**, Este emplea dos llaves en vez de una para ejercer las funciones de cifrado y descifrado de la información.
 
 <figure>
-  <img src="https://hackingprofessional.github.io/Security/images/asimetrico.jpg" width="40%" height="55%">
+  <img src="https://hackingprofessional.github.io/Security/images/Asimetrico.jpg" width="40%" height="55%">
 	<figcaption>
-    <a href="https://hackingprofessional.github.io/Security/images/asimetrico.jpg" title="Explicacion del cifrado Asimetrico">Explicacion del cifrado Asimetrico</a>.
+    <a href="https://hackingprofessional.github.io/Security/images/Asimetrico.jpg" title="Explicacion del cifrado Asimetrico">Explicacion del cifrado Asimetrico</a>.
   </figcaption>
 </figure>
 
