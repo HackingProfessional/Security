@@ -98,7 +98,7 @@ c0bc802345bbaf09d0867eed64c59a99  index.js
 89760bd9a51e4a0cd853d59e6e0cdc2490e058349d08a5d4c1940394ff151977  index.js
 ```
 
-### Calcular hash de una cadena de texto
+### Calcular el hash de una cadena de texto
 
 ```zsh
 ┌─[root@Kratos] - [~/Desktop/MyCodes/BotTelegram] - [Mon May 06, 20:46]
