@@ -10,7 +10,7 @@ tags:
 ---
 
 Hello Programmers!!  
-En este artículo, aprenderemos a crear un bot en telegram desde 0.
+En este artículo, aprenderemos a crear un bot en telegram desde 0 con Node JS.
 
 ## Conceptos Basicos
 
@@ -37,7 +37,6 @@ Para empezar a preparar nuestro proyecto ejecutamos el siguiente comando:
 
 Con este comando se crea un archivo llamado **package.json**. 
 En este archivo, queda reflejada la configuración del proyecto de NodeJs tales como:
-
 	- Nombre del proyecto.  
 	- Autor.  
 	- Version.  
@@ -45,7 +44,7 @@ En este archivo, queda reflejada la configuración del proyecto de NodeJs tales 
 	- Scripts.  
 	- Repositorio Git.  
 
-El contenido del archivo debería tener una estructura simalar a esta:  
+El contenido del archivo debería tener una estructura similar a esta:  
 
 ```js
 {
@@ -101,7 +100,7 @@ const bot = new TelegramBot(token, {polling: true});
 ```
 
 ## Generando nuestro token con [@BotFather](https://www.t.me/botfather)
-Para crear y obtener nuestro Token, el cual nos permitirá tener una comunicación con la API de Telegram debemos hablar al padre de los bots, BotFather.  
+Para crear y obtener nuestro Token, el cual nos permitirá tener una comunicación con la API de Telegram debemos interactuar con el padre de los bots, [@BotFather](https://www.t.me/botfather).  
 
 ### Algunos comandos de BotFather son:
   - /newbot — para crear un nuevo bot  
@@ -155,7 +154,7 @@ bot.on('message', function(msg){
     // msg.chat.id se encarga de recoger el id del chat donde se está realizando la petición.
     var chatId = msg.chat.id;
     // Enviamos nuestro mensaje indicando el id del chat. 
-    bot.sendMessage(chatId, 'Received your message');
+    bot.sendMessage(chatId, 'Se ha recibido el mensaje');
 });
 ```
 
@@ -194,10 +193,12 @@ Para poder realizar pruebas sobre nuestro bot ejecutamos lo siguiente:
 > node index.js
 ```
 
+Luego de la ejecucion de nuestro bot, debemos realizar una busqueda en telegram con el nombre del telegram para mi ejemplo utilice el nombre de **GerhBot66**.
+
 <figure>
   <img src="https://hackingprofessional.github.io/Security/images/TestFinalBotTel.png" width="40%" height="55%">
 	<figcaption>
-    <a href="https://hackingprofessional.github.io/Security/images/TestFinalBotTel.png" title="Generando un token para nuestro Bot">Generando un token para nuestro Bot de Telegram</a>
+    <a href="https://hackingprofessional.github.io/Security/images/TestFinalBotTel.png" title="Probando nuestro bot de telegram creado en Node JS">Probando nuestro bot de telegram creado en Node JS</a>
   </figcaption>
 </figure>
 
@@ -216,6 +217,6 @@ Luego de la interaccion con el bot, obtenemos la salida de nuestro **console.log
      first_name: 'Gerh',
      username: 'GerhSephiroth',
      type: 'private' },
+  date: 1557183411,
   text: 'Gerardo Esta Aqui' }
 ```
-  date: 1557183411,
