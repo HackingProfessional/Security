@@ -86,12 +86,36 @@ La gestión de la información se establece gracias a los siguientes tres pilare
 Hoy en día los algoritmos de hashing principalmente empleados son MD5 y SHA-1.    
 El **Hash** es un grupo de caracteres alfanuméricos, el cual es el resultado de aplicarle la función de hashing a un mensaje o archivo para comprobar la autenticidad.  
 
+### Calcular un hash en Linux 
+
+```
+┌─[root@Kratos] - [~/Desktop/MyCodes/BotTelegram] - [Mon May 06, 20:46]
+└─[$]> md5sum index.js 
+c0bc802345bbaf09d0867eed64c59a99  index.js
+
+┌─[root@Kratos] - [~/Desktop/MyCodes/BotTelegram] - [Mon May 06, 20:46]
+└─[$]> sha256sum index.js 
+89760bd9a51e4a0cd853d59e6e0cdc2490e058349d08a5d4c1940394ff151977  index.js
+```
+
+### Calcular hash de una cadena de texto
+
+```zsh
+┌─[root@Kratos] - [~/Desktop/MyCodes/BotTelegram] - [Mon May 06, 20:46]
+└─[$]> echo -n texto | md5sum
+62059a74e9330e9dc2f537f712b8797c  -
+
+┌─[root@Kratos] - [~/Desktop/MyCodes/BotTelegram] - [Mon May 06, 20:46]
+└─[$]> echo -n texto | sha256sum
+0d389a0d43622f91b3f68ed29fd2c4f0676a8aabd44ea5c63f8ee5511bff7289  -
+```
+
 ## Glosario 
 
 **MD5**: Este es el acrónimo de Message-Digest 5. Se utiliza para crear valores hash de 128 bits. En teoría, los hashes no se pueden revertir en el texto plano original. MD5 se utiliza para cifrar contraseñas y verificar la integridad de los datos. MD5 no es resistente a la colisión. La resistencia a la colisión es la dificultad para encontrar dos valores que producen los mismos valores hash.  
 
 **SHA**: Este es el acrónimo de Secure Hash Algorithm. Los algoritmos SHA se utilizan para generar representaciones condensadas de un mensaje (resumen del mensaje).  
-Tiene varias versiones tales como:
+Tiene varias versiones tales como:  
 	- **SHA-0**: Produce valores hash de 120 bits. Se retiró del uso debido a fallas importantes y se reemplazó por SHA-1.  
 	- **SHA-1**: Produce valores hash de 160 bits. Es similar a las versiones anteriores de MD5. Tiene debilidad criptográfica y no se recomienda su uso desde el año 2010.  
 	- **SHA-2**: Tiene dos funciones hash, a saber, SHA-256 y SHA-512. SHA-256 usa palabras de 32 bits, mientras que SHA-512 usa palabras de 64 bits.  
