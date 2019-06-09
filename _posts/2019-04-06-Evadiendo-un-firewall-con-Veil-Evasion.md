@@ -193,7 +193,7 @@ drwxr-xr-x 5 root root 4.0K Apr  6 11:47 ..
 
 Como se puede ver en la captura de pantalla anterior, Veil/Evasion ha generado un nuevo archivo ".exe" que he llamado "Malware.exe" (Puede nombrarlo como usted desee).
 Y listo, tenemos nuestro payload ofuscado.
-Si estas interesado en como puedo usar este payload, te invito a mi siguiente [post]() donde hago una demostracion en un entorno de pruebas controlado sobra la maquina Tally de HackTheBox.
+Si estas interesado en como puedo usar este payload, te invito a mi siguiente [post](https://hackingprofessional.github.io/HTB/Hacking-a-sharepoint-website/) donde hago una demostracion en un entorno de pruebas controlado sobra la maquina Tally de HackTheBox.
 
 ## Conclusion
 Evadir los antivirus y los dispositivos de seguridad es una de las tareas más importantes de un hacker, y Veil-Evasion es otra herramienta que deberiamos tener en nuestro arsenal. Sin embargo, se debe tener en cuenta que NUNCA hay una solución única y final.
