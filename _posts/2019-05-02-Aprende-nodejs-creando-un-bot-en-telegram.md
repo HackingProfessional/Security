@@ -34,7 +34,7 @@ Para empezar a preparar nuestro proyecto ejecutamos el siguiente comando:
 ╭─[~/Desktop/MyCodes/Kratos]─[root@Arthorias]─[0]─[3457]
 ╰─[:)] # npm init
 ```
-
+## Que es el archivo package.json
 Con este comando se crea un archivo llamado **package.json**. 
 En este archivo, queda reflejada la configuración del proyecto de NodeJs tales como:
 	- Nombre del proyecto.  
