@@ -94,16 +94,16 @@ Cada dependencia cumplira con un papel importante en nuestro desarrollo:
 
 ### Para que sirven las dependecias previamente instaladas?
 
-*bcrypt*, Esta dependencia nos ayudara a hashear de manera simple las contraseñas de los usuarios.
+**bcrypt**, Esta dependencia nos ayudara a hashear de manera simple las contraseñas de los usuarios.
 De esta manera, garantizamos la confidencialidad de estos datos sensibles que estaran almacenados en nuestra base de datos.  
 
-*body-parser*, Con esta dependencia vamos a extraer toda la parte del cuerpo de un flujo de solicitud entrante y lo expone en **req.body**; como algo con lo que es más fácil interactuar. 
+**body-parser**, Con esta dependencia vamos a extraer toda la parte del cuerpo de un flujo de solicitud entrante y lo expone en **req.body**; como algo con lo que es más fácil interactuar. 
 
-*Mongoose*, es una herramienta de modelado de objetos MongoDB diseñada para trabajar en un entorno asíncrono.  
+**Mongoose**, es una herramienta de modelado de objetos MongoDB diseñada para trabajar en un entorno asíncrono.  
 
-*Morgan*, Es middleware del registrador de solicitudes HTTP para node.js  
+**Morgan**, Es middleware del registrador de solicitudes HTTP para node.js  
 
-*Nodemon*, Esta dependencia observará los archivos en el directorio en el que se inició nodemon, y si cualquier archivo cambia, nodemon reiniciará automáticamente su aplicación de node.JS.  
+**Nodemon**, Esta dependencia observará los archivos en el directorio en el que se inició nodemon, y si cualquier archivo cambia, nodemon reiniciará automáticamente su aplicación de node.JS.  
 
 Después de instalar las dependencias, su archivo **package.json** tendrá la lista de todas las dependencias instaladas:  
 
@@ -481,7 +481,7 @@ module.exports = mongoose;
 Si deseas aprender a como crear una coleccion
 
 ### Probando Nuestra API  
-Las operaciones HTTP disponibles para nuestra API son:
+Las operaciones HTTP disponibles para nuestra API son:  
 
   - POST (crear un recurso o generalmente proporcionar datos)  
   - GET (recuperar un índice de recursos o un recurso individual)  
@@ -528,7 +528,7 @@ Registro de usuarios.
   </figcaption>
 </figure>
 
-**Listado de videojuegos por ID (Listado Dinamico)**
+**Listado de videojuegos por ID (Listado Dinamico)**  
 **GET http://localhost:3000/videogames/XXXXXXX**  
 <figure>
   <img src="https://hackingprofessional.github.io/Security/images/LeerDinamicoGET.png" width="40%" height="55%">
@@ -537,7 +537,7 @@ Registro de usuarios.
   </figcaption>
 </figure>  
 
-**Actualizacion de videojuegos por ID**
+**Actualizacion de videojuegos por ID**  
 **PUT http://localhost:3000/videogames/XXXXXXX**  
 <figure>
   <img src="https://hackingprofessional.github.io/Security/images/ActualizarRegistroPUT.png" width="40%" height="55%">
@@ -546,7 +546,7 @@ Registro de usuarios.
   </figcaption>
 </figure>
 
-**Eliminacion de videojuegos por ID**
+**Eliminacion de videojuegos por ID**  
 **DELETE http://localhost:3000/videogames/XXXXXXX**  
 <figure>
   <img src="https://hackingprofessional.github.io/Security/images/EliminarRegistro.png" width="40%" height="55%">
@@ -555,4 +555,4 @@ Registro de usuarios.
   </figcaption>
 </figure>
 
-Puedes encontrar el código completo en [GitHub]()
+Puedes encontrar el código completo en [GitHub](https://github.com/hackingprofessional/API-REST-NODEJS)
