@@ -130,6 +130,16 @@ winscp
 
 ## Enumerando SMTP  
 
+| SMTP Command | Description of Command                                                                                                                                                                     |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| HELO         | It’s the first SMTP command: is starts the conversation identifying the sender server and is generally followed by its domain name.                                                        |
+| EHLO         | An alternative command to start the conversation, underlying that the server is using the Extended SMTP protocol.                                                                          |
+| MAIL FROM    | With this SMTP command the operations begin: the sender states the source email address in the “From” field and actually starts the email transfer.                                        |
+| RCPT TO      | It identifies the recipient of the email; if there are more than one, the command is simply repeated address by address.                                                                   |
+| DATA         | With the DATA command the email content begins to be transferred; it’s generally followed by a 354 reply code given by the server, giving the permission to start the actual transmission. |
+| VRFY         | The server is asked to verify whether a particular email address or username actually exists.                                                                                              |
+| QUIT         | It terminates the SMTP conversation.                                                                                                                                                       |  
+
 ```bash
 # Banner grab
 nc 192.168.6.66 25
@@ -156,16 +166,6 @@ QUIT
 ```  
 
 **Archivos de configuracion relacionados a SMTP**  
-
-| SMTP Command | Description of Command                                                                                                                                                                     |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HELO         | It’s the first SMTP command: is starts the conversation identifying the sender server and is generally followed by its domain name.                                                        |
-| EHLO         | An alternative command to start the conversation, underlying that the server is using the Extended SMTP protocol.                                                                          |
-| MAIL FROM    | With this SMTP command the operations begin: the sender states the source email address in the “From” field and actually starts the email transfer.                                        |
-| RCPT TO      | It identifies the recipient of the email; if there are more than one, the command is simply repeated address by address.                                                                   |
-| DATA         | With the DATA command the email content begins to be transferred; it’s generally followed by a 354 reply code given by the server, giving the permission to start the actual transmission. |
-| VRFY         | The server is asked to verify whether a particular email address or username actually exists.                                                                                              |
-| QUIT         | It terminates the SMTP conversation.                                                                                                                                                       |  
 
 sendmail.cf  
 submit.cf  
