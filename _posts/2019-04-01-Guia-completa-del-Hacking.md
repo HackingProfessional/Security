@@ -30,8 +30,8 @@ Debido al gran contenido que abarca la seguridad informatica, este post esta en 
 **[Enumerando el servicio SNMP (Puerto 161)](#enumerando-snmp)**<br>
 **[Enumerando MySQL](#enumerando-mysql)**<br>
 **[Enumerando Oracle](#enumerando-oracle)**<br>
-**[SQL Injections](#sqlinjections)**<br>
-**[XSS Injections](#xssinjections)**<br>
+**[SQL Injections](#sql-injections)**<br>
+**[XSS Injections](#xss-injections)**<br>
 **[Realizando transferencias de zonas DNS](#dns-zone-transfers)**<br>
 **[Montando Sistemas de archivos compartidos](#montando-recursos-compartidos)**<br>
 **[Tecnicas de Fingerprinting](#tecnicas-de-fingerprinting)**<br>
@@ -429,7 +429,7 @@ tnscmd10g status -h INSERTIPADDRESS
 http://www.vulnerabilityassessment.co.uk/default_oracle_passwords.htm
 ```  
 
-## SQLInjections
+## SQL Injections
 
 **Inyeccion en formularios de inicio de sesion** 
 
