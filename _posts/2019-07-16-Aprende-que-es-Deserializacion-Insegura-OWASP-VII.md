@@ -2,7 +2,7 @@
 layout: post
 title: "Aprende que es una Deserialización Insegura"
 excerpt: "Explotando los 10 riesgos mas criticos segun el OWASP VII"
-image: "https://hackingprofessional.github.io/Security/images/OwaspTopTen2.png"
+image: "https://hackingprofessional.github.io/Security/images/OwaspTopTen.jpg"
 tags: 
   - Insecure Deserialization
   - Hacking NodeJS

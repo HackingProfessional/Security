@@ -2,7 +2,7 @@
 layout: post
 title: "Evadiendo controles de acceso"
 excerpt: "Explotando los 10 riesgos mas criticos segun el OWASP IV"
-image: "https://hackingprofessional.github.io/Security/images/OwaspTopTen2.png"
+image: "https://hackingprofessional.github.io/Security/images/OwaspTopTen.jpg"
 tags: 
   - Analizando codigo fuente
   - Hacking NodeJS
@@ -202,14 +202,14 @@ El control de acceso sólo es efectivo si es aplicado del lado del servidor o en
 
 ## Aprende hacking explotando las vulnerabilidades mas criticas en aplicaciones WEB.  
 
- - [A1: Inyección](https://hackingprofessional.github.io/Security/Como-realizar-una-inyeccion-SQL-OWASP-1)   
+ - [A1: Inyección](https://hackingprofessional.github.io/Security/Como-realizar-una-inyeccion-SQL-OWASP-I)   
  - [A2: Pérdida de Autenticación](https://hackingprofessional.github.io/Security/Perdida-de-autenticacion-y-exposicion-de-datos-OWASP-II)  
  - [A3: Exposición de datos sensibles](https://hackingprofessional.github.io/Security/Perdida-de-autenticacion-y-exposicion-de-datos-OWASP-II)  
  - [A4: Entidades Externas XML (XXE)](https://hackingprofessional.github.io/Security/Como-realizar-una-inyeccion-XML-OWASP-III)  
  - [A5: Pérdida de Control de Acceso](https://hackingprofessional.github.io/Security/Evadiendo-controles-de-acceso-OWASP-IV)  
- - [A6: Configuración de Seguridad Incorrecta](https://hackingprofessional.github.io/Security/El-riesgo-de-las-Configuraciónes-Incorrectas-de-Seguridad-OWAPS-V)  
+ - [A6: Configuración de Seguridad Incorrecta](https://hackingprofessional.github.io/Security/El-riesgo-de-las-Configuraciones-Incorrectas-de-Seguridad-OWAPS-V/)  
  - [A7: Secuencia de Comandos en Sitios Cruzados (XSS)](https://hackingprofessional.github.io/Security/Aprende-a-realizar-una-inyeccion-XSS-OWASP-VI)  
- - [A8: Deserialización Insegura](https://hackingprofessional.github.io/Security/Aprende-que-es-Deserialización-Insegura-OWASP-VII)  
+ - [A8: Deserialización Insegura](https://hackingprofessional.github.io/Security/Aprende-que-es-Deserializacion-Insegura-OWASP-VII/)  
  - [A9: Componentes con vulnerabilidades conocidas](https://hackingprofessional.github.io/Security/Explotando-vulnerabilidades-conocidas-OWASP-VIII)  
  - [A10: Registro y Monitoreo Insuficientes](https://hackingprofessional.github.io/Security/Explotando-vulnerabilidades-conocidas-OWASP-VIII)  
 
