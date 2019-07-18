@@ -97,9 +97,9 @@ Debemos acceder a la siguiente ruta para crear nuestro usuario:
 http://172.17.0.2:9090/register  
 
 <figure>
-  <img src="https://hackingprofessional.github.io/Security/images/DAM1.png" width="40%" height="55%">
+  <img src="https://hackingprofessional.github.io/Security/images/DAM2.png" width="40%" height="55%">
 	<figcaption>
-    <a href="https://hackingprofessional.github.io/Security/images/DAM1.png" title="Registro de usuarios para acceder al laboratorio">Registro de usuarios para acceder al laboratorio</a>.
+    <a href="https://hackingprofessional.github.io/Security/images/DAM2.png" title="Registro de usuarios para acceder al laboratorio">Registro de usuarios para acceder al laboratorio</a>.
   </figcaption>
 </figure>
 
@@ -107,9 +107,9 @@ Luego de autenticarnos, tendremos acceso al siguiente link:
 http://172.17.0.2:9090/learn  
 
 <figure>
-  <img src="https://hackingprofessional.github.io/Security/images/DAM2.png" width="40%" height="55%">
+  <img src="https://hackingprofessional.github.io/Security/images/DAM3.png" width="40%" height="55%">
 	<figcaption>
-    <a href="https://hackingprofessional.github.io/Security/images/DAM2.png" title="Registro de usuarios para acceder al laboratorio">Registro de usuarios para acceder al laboratorio</a>.
+    <a href="https://hackingprofessional.github.io/Security/images/DAM3.png" title="Registro de usuarios para acceder al laboratorio">Registro de usuarios para acceder al laboratorio</a>.
   </figcaption>
 </figure>
 
