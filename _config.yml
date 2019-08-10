@@ -4,7 +4,7 @@
 title: Binary Chaos |-| Hacking y Programación 
 description: Aprende tips de Programación, Seguridad informatica, Hacking Etico y Pentesting desde 0. # this means to ignore newlines until "baseurl:"
 baseurl: "/Security" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://hackingprofessional.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 title-short: "Binary Chaos"
 
 #-------------------------------
@@ -23,7 +23,7 @@ whatsapp: https://api.whatsapp.com/send?phone=0573002913552 # Add your Facebook 
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
+disqus-identifier: https-hackingprofessional-github-io-htb # Add your shortname for Disqus Comment. For example mr-brown
 
 
 #-------------------------------
