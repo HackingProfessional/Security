@@ -2,7 +2,7 @@
 layout: post
 title: "Guia Inicial"
 description: "Una breve introduccion para iniciar en el mundo del hacking."
-image: "/img/novato.jpg"
+image: "img/novato.jpg"
 tags: 
   - Hacking desde 0
   - ¿Como ser un hacker?
