@@ -1,0 +1,40 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="footer-top">
+          <h2 class="logo-title">
+            <a href="{{site.baseurl}}/" class="logo-text">{{ site.title-short }}</a>
+          </h2>
+          <div class="top"><i class="ion ion-ios-arrow-up"></i></div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; {{site.time | date: '%Y'}} How to Become a Hacker!
+            </p>
+          </div>
+          <div class="footer-social">
+            <ul class="list-reset">
+              
+              {% if site.email %}
+              <li><a href="{{ site.email }}">Email</a></li>
+              {% else %} {% endif %}
+
+              {% if site.facebook %}
+              <li><a href="{{ site.facebook }}">Facebook</a></li>
+              {% else %} {% endif %}
+
+              {% if site.instagram %}
+              <li><a href="{{ site.instagram }}">Instagram</a></li>
+              {% else %} {% endif %}
+
+              {% if site.whatsapp %}
+              <li><a href="{{ site.whatsapp }}">Whatsapp</a></li>
+              {% else %} {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> <!-- /.footer -->

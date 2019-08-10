@@ -1,0 +1,76 @@
+#-------------------------------
+# General Site Settings
+
+title: Binary Chaos |-| Hacking y Programación 
+description: Aprende tips de Programación, Seguridad informatica, Hacking Etico y Pentesting desde 0. # this means to ignore newlines until "baseurl:"
+baseurl: "/Security" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+title-short: "Binary Chaos"
+
+#-------------------------------
+# About Section
+author-name:   Gerardo Eliasib
+author-avatar: img.jpg
+
+
+#-------------------------------
+# Contact links
+facebook:  https://facebook.com/Gerh002 # Add your Facebook handle
+email:   "mailto:gerueda6@misena.edu.co" # Add your Facebook handle
+instagram: https://www.instagram.com/gerardo_rh97 # Add your Facebook handle
+whatsapp: https://api.whatsapp.com/send?phone=0573002913552 # Add your Facebook handle
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Instagram Feed
+instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: UA-136401706-1 # Add your identifier. For example UA-99631805-1.
+
+
+#-------------------------------
+# Newsletter
+# Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+mailchimp: misena.us3.list-manage.com/subscribe/post?u=834260b89200ad9ffdf85845b&amp;id=dc04f5c45d
+ 
+
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: ':title/'
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+
+paginate: 7
+paginate_path: "/page/:num"
+
+include:
+  - _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+#-------------------------------
+# Exclude from processing.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
