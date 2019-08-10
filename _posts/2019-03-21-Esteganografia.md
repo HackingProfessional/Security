@@ -3,7 +3,7 @@ layout: post
 title:  "Esteganografia I"
 description: "Tecnicas para ocultar informacion."
 date:   2019-03-16
-image:  Esteganografia.png
+image:  "Esteganografia.png"
 tags:   [Estegoanalisis, Esteganografia, Herramientas Utiles]
 ---
 
