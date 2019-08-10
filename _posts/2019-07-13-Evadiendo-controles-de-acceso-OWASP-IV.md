@@ -3,7 +3,7 @@ layout: post
 title:  "Evadiendo controles de acceso"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP IV"
 date:   2019-07-13
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Aprende Hacking, Enumerando API REST, Pentesting WEB]
 ---
 

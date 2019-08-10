@@ -3,7 +3,7 @@ layout: post
 title:  "Curso de Nmap I"
 description: "Escaneando redes con Nmap desde 0"
 date:   2019-03-22
-image:  CourseNmap.png
+image:  "img/CourseNmap.png"
 tags:   [Information Gathering, Auditando redes con Nmap, Enumeracion]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Aprende a configurar un cliente VPN SSL en Linux"
 description: "Como usar forticlient en Debian (SSL VPN)"
 date:   2019-04-15
-image:  fortinet.jpg
+image:  "img/fortinet.jpg"
 tags:   [Linux, Fortinet, Herramientas Utiles]
 ---
 

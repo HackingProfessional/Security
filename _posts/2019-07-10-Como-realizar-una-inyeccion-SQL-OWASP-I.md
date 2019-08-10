@@ -3,7 +3,7 @@ layout: post
 title:  "Aprende a realizar una inyeccion SQL"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP I"
 date:   2019-07-10
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Inyeccion SQL, Password Cracking, Aprende Docker]
 ---
 

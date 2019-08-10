@@ -2,7 +2,7 @@
 layout: post
 title:  "Password Cracking"
 date:   2019-03-16
-image:  "cracking.jpg"
+image:  "img/cracking.jpg"
 description: "Ataque de fuerza bruta hacia archivos comprimidos y PDF'S"
 tags:   [Password Cracking, Fuerza Bruta, Ataque de diccionario]
 ---

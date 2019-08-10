@@ -3,7 +3,7 @@ layout: post
 title:  "How to hack a site made in Sharepoint"
 description: "Learn pentesting web from 0 with HackTheBox (Tally)"
 date:   2019-04-05
-image:  SharepointHacked.jpg
+image:  "img/SharepointHacked.jpg"
 tags:   [Enumeration, Pentesting WEB, Escalation Privilege, Obfuscation techniques]
 ---
 

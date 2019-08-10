@@ -3,7 +3,7 @@ layout: post
 title:  "How to hack a website on Drupal CMS"
 description: "Learn pentesting web from 0 with HackTheBox (bastard)"
 date:   2019-04-20
-image:  drupal.jpg
+image:  "img/drupal.jpg"
 tags:   [Hacking Windows, Pentesting WEB, Hacking Drupal, Metasploit Framework]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Explotando vulnerabilidades conocidas y los riesgos de falta de monitoreo"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP VIII"
 date:   2019-07-17
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Vulnerabilidades Conocidas, Pentesting WEB, Hacking NodeJS]
 ---
 

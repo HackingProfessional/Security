@@ -3,7 +3,7 @@ layout: post
 title:  "Como evadir la deteccion de un Firewall I"
 description: "Como usar Veil/Evasion desde 0"
 date:   2019-04-06
-image:  VeilEvasion.png
+image:  "img/VeilEvasion.png"
 tags:   [Penetration Testing, Hacking desde 0, Evadiendo firewall's]
 ---
 

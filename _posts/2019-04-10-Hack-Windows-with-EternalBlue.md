@@ -3,7 +3,7 @@ layout: post
 title:  "How to Hack Windows with EternalBlue"
 description: "Using the NSA's EternalBlue exploit"
 date:   2019-04-10
-image:  EternalBlue.jpg
+image:  "img/EternalBlue.jpg"
 tags:   [Hacking Windows, Hacking from 0, Metasploit Framework]
 ---
 

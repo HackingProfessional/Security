@@ -3,7 +3,7 @@ layout: post
 title:  "Extraer contraseña de Windows con Mimikatz"
 description: "Obteniendo la contraseña de administrador de Windows 7"
 date:   2019-04-11
-image:  Mimikatz.jpg
+image:  "img/Mimikatz.jpg"
 tags:   [Hacking Windows, Hacking from 0, Mimikatz]
 ---
 

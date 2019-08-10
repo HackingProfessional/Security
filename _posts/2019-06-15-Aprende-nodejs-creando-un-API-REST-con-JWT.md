@@ -3,7 +3,7 @@ layout: post
 title:  "Crear una API REST segura con Node.JS"
 description: "Construyendo una API con Node.JS, JWT, Bcrypt, Express y MongoDB"
 date:   2019-06-15
-image:  API.png
+image:  "img/API.png"
 tags:   [Aprende Nodejs, Creando una API REST, Prácticas de programación segura]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Como compartir archivos a través de HTTP"
 description: "Aprende a compartir rápidamente archivos y carpetas a través de HTTP en Linux"
 date:   2019-04-02
-image:  shareHttpLinux.png
+image:  "img/shareHttpLinux.png"
 tags:   [Aprende Python, Aprende Ruby, Aprende NodeJS]
 ---
 

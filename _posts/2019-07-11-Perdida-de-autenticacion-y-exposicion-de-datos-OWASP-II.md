@@ -3,7 +3,7 @@ layout: post
 title:  "Perdida de autenticacion y exposicion de datos"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP II"
 date:   2019-07-11
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Aprende Hacking, Hacking NodeJS, Pentesting WEB]
 ---
 

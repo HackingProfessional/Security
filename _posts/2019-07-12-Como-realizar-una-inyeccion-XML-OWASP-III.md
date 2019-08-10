@@ -3,7 +3,7 @@ layout: post
 title:  "Como hackear un servidor web con una inyeccion XML"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP III"
 date:   2019-07-12
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Aprende Hacking, Injection XML External Entity, Pentesting WEB]
 ---
 

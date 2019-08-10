@@ -3,7 +3,7 @@ layout: post
 title:  "Aprende que es una Deserialización Insegura"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP VII"
 date:   2019-07-16
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Insecure Deserialization, Pentesting WEB, Hacking NodeJS]
 ---
 

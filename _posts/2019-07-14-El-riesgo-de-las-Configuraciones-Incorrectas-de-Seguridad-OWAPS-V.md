@@ -3,7 +3,7 @@ layout: post
 title:  "Configuraciones Incorrectas de Seguridad"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP V"
 date:   2019-07-14
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Fingerprinting, Generando error en aplicativos, Hacking NodeJS]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Guia Completa de Hacking"
 description: "Aprende pentesting desde 0 con esta guia completa"
 date:   2019-04-01
-image:  TheBibleHacker.png
+image:  "img/TheBibleHacker.png"
 tags:   [Guia general, Pentesting, Hacking desde 0, Cheatsheet OSCP]
 ---
 

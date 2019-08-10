@@ -3,7 +3,7 @@ layout: post
 title:  "Como realizar una inyeccion XSS y obtener credenciales"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP VI"
 date:   2019-07-15
-image:  OwaspTopTen.jpg
+image:  "img/OwaspTopTen.jpg"
 tags:   [Inyeccion XSS, Pentesting WEB, Hacking NodeJS]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "How to hack a website throught XML External Entity (XXE) Injection"
 description: "Learn pentesting web from 0 with HackTheBox (DevOops)"
 date:   2019-04-15
-image:  XXE.jpg
+image:  "img/XXE.jpg"
 tags:   [Pentesting WEB, Injection XML External Entity, Hacking Linux]
 ---
 

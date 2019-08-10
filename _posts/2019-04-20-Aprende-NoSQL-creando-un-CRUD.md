@@ -3,7 +3,7 @@ layout: post
 title:  "Aprende NoSQL creando un CRUD"
 description: "Aprendiendo a Programar con NoSQL desde 0"
 date:   2019-04-20
-image:  MongoDB-NoSQL.png
+image:  "img/MongoDB-NoSQL.png"
 tags:   [Aprende a programar, Aprende NoSQL, Aprende MongoDB]
 ---
 

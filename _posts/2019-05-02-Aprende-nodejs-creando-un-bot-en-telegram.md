@@ -3,7 +3,7 @@ layout: post
 title:  "Aprende NodeJS creando un bot en Telegram"
 description: "Aprende NodeJS desde 0"
 date:   2019-05-02
-image:  NodeJSbot.png
+image:  "img/NodeJSbot.png"
 tags:   [Aprende a programar, Aprende Nodejs, Creacion de bots]
 ---
 

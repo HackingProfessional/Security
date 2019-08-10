@@ -3,7 +3,7 @@ layout: post
 title:  "Enumeracion de un sistema con GoScan"
 description: "Como automatizar la fase inicial de un pentesting"
 date:   2019-04-02
-image:  goscan.png
+image:  "img/goscan.png"
 tags:   [Information Gathering, Enumeracion, Herramientas Utiles]
 ---
 

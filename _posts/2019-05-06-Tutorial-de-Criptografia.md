@@ -3,7 +3,7 @@ layout: post
 title:  "Tutorial de criptografia I"
 description: "Aprende criptografia desde 0"
 date:   2019-05-06
-image:  criptografia.jpg
+image:  "img/criptografia.jpg"
 tags:   [Aprende Criptografia, Criptoanalisis, Tipos de cifrado]
 ---
 
