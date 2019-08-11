@@ -29,7 +29,15 @@ disqus-identifier: https-hackingprofessional-github-io-htb # Add your shortname 
 #-------------------------------
 # Instagram Feed
 instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
-
+#-------------------------------
+# SEO
+image: https://hackingprofessional.github.io/Security/img/TheBibleHacker.png
+social:
+  name: Gerardo Eliasib
+  links:
+    - https://facebook.com/Gerh002
+    - https://www.instagram.com/gerardo_rh97
+    - https://www.linkedin.com/in/gerh/
 
 #-------------------------------
 # Google Analytics

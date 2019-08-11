@@ -10,8 +10,8 @@ tags:   [Penetration Testing, Hacking desde 0, Evadiendo firewall's]
 Uno de los problemas más importantes que un hacker debe abordar, es cómo superar dispositivos de seguridad y permanecer sin ser detectado.  
 Estos pueden ser Firewalls, antivirus, sistemas de detección de intrusos (IDS), cortafuegos de aplicaciones web, Sistema de prevención de intrusos (IPS) y muchos otros. Varios de estos dispositivos emplean un esquema de detección basado en firmas donde mantienen una base de datos de malware o exploits conocidos y firmas de carga útiles, la recomendado para evadir esto es:
 
-    - 1.) Generar el exploit
-    - 2.) Cambiar la firma del exploit
+	- Generar el exploit
+	- Cambiar la firma del exploit
 
 En el dia de hoy, vamos aprender a recodificar un payload o carga util para ocultar la firma conocida de este; la herramienta que nos ayudara a realizar esto es conocida como Veil-Evasion.
 
