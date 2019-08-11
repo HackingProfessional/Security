@@ -19,7 +19,7 @@ python3 -m http.server
 
 #Python 2.x
 python -m SimpleHTTPServer 6969
-{% endhighlight %}`
+{% endhighlight %}
 
 ### Ruby  
 
