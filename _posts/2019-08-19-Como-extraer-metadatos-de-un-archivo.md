@@ -83,7 +83,7 @@ Create Date                     : 2017:10:31 18:42:00Z
 Modify Date                     : 2017:10:31 18:51:00Z
 {% endhighlight %}
 
-Esta informacion obtenida podria ser usada para realizar ataques de phising, si deseas conocer el riesgo de mantener estos metadatos, te invito a leer la siguiente [publicacion]() donde realizo una demostracion sobre un entorno vulnerable.  
+Esta informacion obtenida podria ser usada para realizar ataques de phising, si deseas conocer el riesgo de mantener estos metadatos, te invito a leer la siguiente [publicacion](https://hackingprofessional.github.io/Security/how-to-hack-windows-8-with-Phishing/) donde realizo una demostracion sobre un entorno vulnerable.  
 [Hackeando Reel]()
 
 ## Cómo prevenir la divulgación de información de metadatos
