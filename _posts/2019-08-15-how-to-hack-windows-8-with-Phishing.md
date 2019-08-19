@@ -698,5 +698,7 @@ To validate this, we can use credentials and log in by SSH.
 {% highlight zsh %}
 ╭─[~/Desktop/APOLO/Ethic4l-Hacking/Operations/Premium/Reel]─[root@Arthorias]─[0]─[2505]
 ╰─[:)] # ssh Administrator@10.10.10.77
-Microsoft Windows [Version 6.3.9600]                                                              (c) 2013 Microsoft Corporation. All rights reserved.                                              administrator@REEL C:\Users\Administrator> 
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+administrator@REEL C:\Users\Administrator> 
 {% endhighlight %}  
