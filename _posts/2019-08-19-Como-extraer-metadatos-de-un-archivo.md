@@ -3,7 +3,7 @@ layout: post
 title: "Como extraer los metadatos de un archivo"
 description: "Obteniendo informacion oculta de los archivos"
 date: 2019-08-19
-image:  "img/Metadata.jpg"
+image:  "img/Metadata.png"
 tags: ["Metadatos","Enumeracion"]
 ---
 
