@@ -14,13 +14,13 @@ Antes de comenzar, quiero aclarar que todo mi contenido publicado se realiza con
 No soy responsable del mal uso que puedan darte.  
 
 # Con este tutorial aprenderas el siguiente contenido:  
-    - Como realizar un escaneo de puertos con Nmap  
-    - Como realizar un descubrimiento de directorios sobre un servidor web  
-    - Como realizar una inyeccion SQL de segundo orden sobre un servidor web  
-    - Como robar una cookie de sesion administrativa con una inyeccion XSS  
-    - Como realizar un analisis de ejecutables con **strings**  
-    - Como realizar una busqueda de informacion util para escalar privilegios  
-    - Como manipular un exploit para obtener una ejecucion exitosa  
+   - Como realizar un escaneo de puertos con Nmap  
+   - Como realizar un descubrimiento de directorios sobre un servidor web  
+   - Como realizar una inyeccion SQL de segundo orden sobre un servidor web  
+   - Como robar una cookie de sesion administrativa con una inyeccion XSS  
+   - Como realizar un analisis de ejecutables con **strings**  
+   - Como realizar una busqueda de informacion util para escalar privilegios  
+   - Como manipular un exploit para obtener una ejecucion exitosa  
 
 # Hackeando a [Nightmare](https://www.hackthebox.eu/home/machines/profile/137)  
 
