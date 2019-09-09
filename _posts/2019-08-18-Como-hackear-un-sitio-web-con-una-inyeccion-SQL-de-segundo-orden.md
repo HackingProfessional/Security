@@ -51,9 +51,9 @@ Con los resultados del escaneo anterior de Nmap, logramos identificar varios ser
 Cuando visitamos la página web que esta corriendo en el puerto 80, encontramos una página de inicio de sesión.  
 
 <figure>
-  <img src="{{site.baseurl}}/img/Port80Nightmare.png">
+  <img src="{{site.baseurl}}/img/WebPage80.png">
 	<figcaption>
-    <a href="{{site.baseurl}}/img/Port80Nightmare.png" title="Pagina web encontrada en el puerto 80">Pagina web encontrada en el puerto 80</a>.
+    <a href="{{site.baseurl}}/img/WebPage80.png" title="Pagina web encontrada en el puerto 80">Pagina web encontrada en el puerto 80</a>.
   </figcaption>
 </figure>
 
