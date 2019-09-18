@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to hack an active directory with Phishing"
+title: "How to hack an active directory"
 description: Learn pentesting web from 0 with HackTheBox (Reel).
 date:   2019-08-15
 image:  "img/PhishingReel.jpg"
