@@ -15,13 +15,13 @@ Before starting I want to clarify that all my published content is done for educ
 I am not responsible for the misuse they may give you.  
 
 # With this tutorial you will learn:  
-    - How to perform a simple port scan with Nmap.
-    - How to perform a Brute Force attack to discover an Oracle TNS SID.
-    - Learning to use ODAT - (Oracle Database Attack Tool)
-    - How to attack a Oracle server with the Metasploit Framework
-    - How to perform a Forensic analysis with Volatility
-    - How to find password hashes in memory dump
-    - How to perform a privilege escalation using pass the hash technique
+   - How to perform a simple port scan with Nmap.
+   - How to perform a Brute Force attack to discover an Oracle TNS SID.
+   - Learning to use ODAT - (Oracle Database Attack Tool)
+   - How to attack a Oracle server with the Metasploit Framework
+   - How to perform a Forensic analysis with Volatility
+   - How to find password hashes in memory dump
+   - How to perform a privilege escalation using pass the hash technique
 
 # Hacking [Silo](https://www.hackthebox.eu/home/machines/profile/131)
 
@@ -108,18 +108,6 @@ For this task, we can use a metasploit auxiliary module called oracle_login.
 
 {% highlight bash %}
 msf5 > use admin/oracle/oracle_login
-msf5 auxiliary(admin/oracle/oracle_login) >
-msf5 auxiliary(admin/oracle/oracle_login) > options
-
-Module options (auxiliary/admin/oracle/oracle_login):
-
-   Name     Current Setting                                                              Required  Description
-   ----     ---------------                                                              --------  -----------
-   CSVFILE  /usr/share/metasploit-framework/data/wordlists/oracle_default_passwords.csv  no        The file that contains a list of default accounts.
-   RHOST                                                                                 yes       The Oracle host.
-   RPORT    1521                                                                         yes       The TNS port.
-   SID      ORCL                                                                         yes       The sid to authenticate with.
-
 msf5 auxiliary(admin/oracle/oracle_login) > set RHOST 10.10.10.82
 RHOST => 10.10.10.82
 msf5 auxiliary(admin/oracle/oracle_login) > set SID XE
