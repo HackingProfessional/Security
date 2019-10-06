@@ -75,10 +75,10 @@ For this penetration test, we are going to focus on port 1521, which indicates t
 To continue, we will audit this Oracle database with the ODAT tool.  
 **ODAT** It is an open source penetration test tool designed to attack and audit the security of Oracle Database servers.  
 The following steps are:  
-    - Enumerate Oracle Database Version
-    - Discover SIDs (Basically oracles version a unique "database instance")
-    - obtain a user account (likely through bruteforcing)
-    - Exploitation / privesc as needed.
+   - Enumerate Oracle Database Version  
+   - Discover SIDs (Basically oracles version a unique "database instance")  
+   - obtain a user account (likely through bruteforcing)  
+   - Exploitation / privesc as needed.  
 We can use ODAT’s siguesser to discover well:  
 
 {% highlight zsh %}
