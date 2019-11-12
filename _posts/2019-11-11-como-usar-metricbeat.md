@@ -3,7 +3,7 @@ layout: post
 title: "Como monitorear el rendimiento de un equipo con Elasticsearh"
 description: Curso completo de Elastic Stack I
 date:   2019-11-11
-image:  "img/ELK-1.jpg"
+image:  "img/ELK-1.png"
 tags: ["Log Analytics", "Monitoring System", "Elastic Stack"]
 ---
 
