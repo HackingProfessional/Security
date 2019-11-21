@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using Kali Linux as a Docker container"
-description: Learn Docker
+description: Learn Docker for pentesing
 date:   2019-11-11
 image:  "img/Docker-Kali.png"
 tags: ["Aprende Docker", "Penetration Testing", "Kali Linux"]
