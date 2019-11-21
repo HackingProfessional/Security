@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Como realizar una inyeccion XSS y obtener credenciales"
+title:  "Aprende hacking con NodeJS"
 description: "Explotando los 10 riesgos mas criticos segun el OWASP VI"
 date:   2019-07-15
 image:  "img/OwaspTopTen.jpg"
