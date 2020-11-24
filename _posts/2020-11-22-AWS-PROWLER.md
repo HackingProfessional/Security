@@ -16,10 +16,10 @@ Todos esto basandose en los controles del [CIS](https://d0.awsstatic.com/whitepa
 
 El CIS evalua aspectos de seguridad y estos se pueden dividir en 4 controles de seguridad, los cuales son:  
 
-    - Identity and Access Management [group1]
-    - Logging [group2]
-    - Monitoring [group3]
-    - Networking [group4]
+ - Identity and Access Management
+ - Logging
+ - Monitoring
+ - Networking
 
 *Prowler se ha escrito en bash con AWS-CLI y funciona en Linux y OSX.*  
 
