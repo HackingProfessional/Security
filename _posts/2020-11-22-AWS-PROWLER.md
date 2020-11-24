@@ -3,7 +3,7 @@ layout: post
 title:  "Realizando auditorias de seguridad sobre AWS con prowler"
 description: "Aprende a realizar auditorias sobre entornos cloud de AWS"
 date:   2020-11-22
-image:  "img/AWS-PROWLER.jpg"
+image:  "img/AWS-HACKED.jpg"
 tags:   [Cloud, AWS, Pentesting, Security]
 ---
 
@@ -89,3 +89,4 @@ Luego de la ejecuccion previa, se iniciara de manera automatica prowler y empeza
 
 Hay una gran variedad de parametros que podemos usar sobre esta herramienta.
 Si deseas obtener mas informacion relacionada te invito leer [la documentacion oficial de este repositorio](https://github.com/toniblyx/prowler).  
+
