@@ -13,7 +13,7 @@ Durante una evaluación móvil, normalmente habrá dos sub-evaluaciones: la inte
 A veces es muy fácil configurar tu proxy. Otras veces, puede ser muy difícil y llevar mucho tiempo.  
 En esta guía, usaré el proxy Burp Suite de PortSwigger, pero los mismos pasos, por supuesto, se pueden usar con cualquier proxy HTTP. El proxy se alojará en 192.168.1.100 en el puerto 8080 en todos los ejemplos. Las comprobaciones comienzan de forma muy básica, pero aumentan hacia el final.  
 
- - [¿Está configurado su proxy en el dispositivo?](#Configurar el dispositivo)
+ - [¿Está configurado su proxy en el dispositivo?](#Configurar-el-dispositivo)
  - ¿Burp escucha en todas las interfaces?
  - ¿Puede su dispositivo conectarse a su proxy?
  - ¿Puede proxy el tráfico HTTP?
