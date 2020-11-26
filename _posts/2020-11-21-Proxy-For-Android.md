@@ -14,15 +14,15 @@ A veces es muy fácil configurar tu proxy. Otras veces, puede ser muy difícil y
 En esta guía, usaré el proxy Burp Suite de PortSwigger, pero los mismos pasos, por supuesto, se pueden usar con cualquier proxy HTTP. El proxy se alojará en 192.168.1.100 en el puerto 8080 en todos los ejemplos. Las comprobaciones comienzan de forma muy básica, pero aumentan hacia el final.  
 
  - [¿Está configurado su proxy en el dispositivo?](#Configurar-el-dispositivo)
- - ¿Burp escucha en todas las interfaces?
- - ¿Puede su dispositivo conectarse a su proxy?
- - ¿Puede proxy el tráfico HTTP?
- - ¿Su certificado de Burp está instalado en el dispositivo?
- - ¿Su certificado de Burp está instalado como certificado raíz?
- - ¿Tiene su certificado de eructo una vida útil adecuada?
- - ¿Conoce el proxy de la aplicación?
- - ¿La aplicación utiliza puertos personalizados?
- - ¿La aplicación utiliza fijación SSL?
+ - [¿Burp escucha en todas las interfaces?](#¿Burp-escucha-en-todas-las-interfaces?)
+ - [¿Puede su dispositivo conectarse a su proxy?](#¿Puede-su-dispositivo-conectarse-a-su-proxy?)
+ - [¿Puede proxy el tráfico HTTP?](#¿Como-utilizar-el-proxy-sobre-el-tráfico-HTTP?)
+ - [¿Su certificado de Burp está instalado en el dispositivo?](#¿Su-certificado-de-Burp-está-instalado-en-el-dispositivo?)
+ - [¿Su certificado de Burp está instalado como certificado raíz?](#¿Su-certificado-de-Burp-está-instalado-como-certificado-raíz?)
+ - [¿Su certificado tien una vida útil adecuada?](#¿Su-certificado-tiene-una-vida-útil-adecuada?)
+ - [¿Conoce el proxy de la aplicación?](#¿Conoce-el-proxy-de-la-aplicación?)
+ - [¿La aplicación utiliza puertos personalizados?](#¿La-aplicación-utiliza-puertos-personalizados?)
+ - [¿La aplicación utiliza fijación SSL?](#¿La-aplicación-utiliza-fijación-SSL?)
     - Fijación a través de networkSecurityConfig
     - Fijar a través de OkHttp
     - Fijar a través de Ofuscated OkHttp en aplicaciones ofuscadas
@@ -35,7 +35,7 @@ Primero, debemos asegurarnos de que todo esté configurado correctamente en el d
 ## ¿Está configurado su proxy en el dispositivo?
 Un primer paso obvio es configurar un proxy en el dispositivo. La interfaz de usuario cambia un poco según la versión de Android, pero no debería ser demasiado difícil de encontrar.  
 
-**Validacion inicial**
+**Validacion inicial**  
 Ir a *Configuración>Conexiones> Wi-Fi*, seleccione la red Wi-Fi en la que se encuentra, haga clic en *Avanzado>Proxy>Manual* e ingrese los detalles de su Proxy:
 
 **Nombre de host de proxy:** 192.168.1.100
@@ -53,7 +53,7 @@ De forma predeterminada, Burp solo escucha en la interfaz local (127.0.0.1), per
 Normalmente, suelo elegir "escuchar en todas las interfaces".  
 Tenga en cuenta que Burp tiene una API que puede permitir a otras personas en la misma red Wi-Fi consultar su proxy y recuperar información de él.  
 
-**Validacion inicial**
+**Validacion inicial**  
 Para validar vamos a dirigirnos al enlace http://192.168.1.100:8080 desde su computadora host.  
 Debería aparecer la pantalla de bienvenida de Burp.  
 
@@ -70,10 +70,10 @@ En Burp, vaya a *Proxy>Opciones>* Haga clic en su proxy en la ventana Proxy List
 ## ¿Puede su dispositivo conectarse a su proxy?
 Algunas redes tienen aislamiento de host/cliente y no permiten que los clientes se comuniquen entre sí. En este caso, su dispositivo no podrá conectarse al proxy ya que el enrutador no lo permite.  
 
-**Validacion inicial**
+**Validacion inicial**  
 Abra un navegador en el dispositivo y vaya a http://192.168.1.100:8080 . Debería ver la pantalla de bienvenida de Burp. También debería poder navegar a http://burp en caso de que ya haya configurado el proxy en la verificación anterior.  
 
-**Solución**
+**Solución**  
 A continuacion, se enumeran alguna de ellas:
 - Configure una red inalámbrica personalizada donde el aislamiento de host/cliente esté deshabilitado
 - Aloje su proxy en un dispositivo que sea accesible, por ejemplo, una instancia de AWS ec2
@@ -87,20 +87,20 @@ A continuacion, se enumeran alguna de ellas:
 ## ¿Como utilizar el proxy sobre el tráfico HTTP?
 Los pasos para el tráfico HTTP suelen ser mucho más sencillos que el tráfico HTTPS, por lo que una comprobación rápida aquí es asegurar que su proxy esté configurado correctamente y sea accesible para el dispositivo.
 
-**Validacion inicial**
+**Validacion inicial**  
 Vaya a http://neverssl.com y asegúrese de ver la solicitud en Burp. Neverssl.com es un sitio web que no usa HSTS y nunca lo enviará a una versión HTTPS, lo que lo convierte en una prueba perfecta para el tráfico de texto sin formato.  
 
-**Solución**
+**Solución**  
  - Repase las verificaciones anteriores nuevamente, algo puede estar mal.
  - La intercepción de Burp está habilitada y la solicitud está esperando su aprobación.
 
 ## ¿Su certificado de Burp está instalado en el dispositivo?
 Para interceptar el tráfico HTTPS, el certificado de su proxy debe estar instalado en el dispositivo.  
 
-**Validacion inicial**
+**Validacion inicial**  
 Vaya a *Configuración>Seguridad>Credenciales de confianza>Usuario* y asegúrese de que su certificado esté en la lista. Alternativamente, puede intentar interceptar el tráfico HTTPS desde el navegador del dispositivo.
 
-**Solución**
+**Solución**  
 Esto está documentado en muchos lugares, pero aquí hay un resumen rápido:  
  - Navegue a http://burp en su navegador
  - Haga clic en el 'Certificado CA' en la parte superior derecha; comenzará una descarga
@@ -112,10 +112,10 @@ Esto está documentado en muchos lugares, pero aquí hay un resumen rápido:
 Las aplicaciones en versiones más recientes de Android no confían en los certificados de usuario de forma predeterminada.
 Alternativamente, puede volver a empaquetar aplicaciones para agregar los controles relevantes al archivo *network_security_policy.xml*, pero tener su CA raíz en la tienda de CA del sistema le ahorrará un dolor de cabeza en otros pasos (como marcos de terceros), por lo que es mi método preferido.  
 
-**Validacion inicial**  
+**Validacion inicial**    
 Vaya a *Configuración>Seguridad>Credenciales confiables>* Sistema y asegúrese de que su certificado esté en la lista.
 
-**Solución**
+**Solución**  
 Para que su certificado aparezca como certificado raíz, su dispositivo debe estar rooteado con Magisk.
 
  - Instale el certificado de cliente de la forma habitual (consulte la comprobación anterior)
@@ -132,10 +132,10 @@ Alternativamente, puede:
 Google (y por tanto Android) está acortando agresivamente la vida útil máxima aceptada de los certificados.
 Si la fecha de vencimiento de su certificado de hoja está demasiado adelantada en el futuro, Android / Chrome no lo aceptará.
 
-**Validacion inicial**
+**Validacion inicial**  
 Conéctese a su proxy mediante un navegador e investigue la duración del certificado tanto de la CA raíz como del certificado. Si tienen menos de 1 año, está listo. Si son más largos, me gusta ir a lo seguro y crear una nueva CA. También puede utilizar la última versión del navegador Chrome en Android para validar la duración de su certificado. Si algo va mal, Chrome mostrará el siguiente *error:ERR_CERT_VALIDITY_TOO_LONG*.  
 
-**Solución**
+**Solución**  
 Hay dos posibles soluciones aquí:
 
  - Asegúrese de tener instalada la última versión de Burp, que reduce la vida útil de los certificados generados.
@@ -147,7 +147,7 @@ Ahora que el dispositivo está listo para funcionar, es hora de echar un vistazo
 ## ¿Conoce el proxy de la aplicación?
 Muchas aplicaciones simplemente ignoran la configuración de proxy del sistema. Las aplicaciones que usan bibliotecas estándar generalmente usarán la configuración de proxy del sistema, pero las aplicaciones que dependen del lenguaje interpretado (como Xamarin y Unity) o que se compilan de forma nativa (como Flutter) generalmente requieren que el desarrollador programe explícitamente la compatibilidad con el proxy en la aplicación.  
 
-**Validacion inicial**
+**Validacion inicial**  
 Al ejecutar la aplicación, debería ver sus datos HTTPS en la pestaña Proxy de Burp, o debería ver errores de conexión HTTPS en el registro de eventos de Burp en el panel del Tablero . Dado que todo el dispositivo es proxy, verá muchas solicitudes bloqueadas de aplicaciones que usan SSL Pinning (por ejemplo, Google Play), así que deberia analizar si puede encontrar un dominio que esté relacionado con la aplicación. Si no ve ninguna conexión fallida relevante, lo más probable es que su aplicación no tenga conocimiento del proxy.
 
 Como verificación adicional, puede ver si la aplicación utiliza un marco de terceros. Si la aplicación está escrita en Flutter, definitivamente no reconocerá el proxy, mientras que si está escrita en Xamarin o Unity, es muy probable que ignore la configuración del proxy del sistema.
@@ -159,7 +159,7 @@ Como verificación adicional, puede ver si la aplicación utiliza un marco de te
   - Xamarin: *myapp/unknown/assemblies/Mono.Android.dll*
   - Unity: *myapp/lib/arm64-v8a/libunity.so*
 
-**Solución**
+**Solución**  
 Recomiendo revisar lo siguiente:
 
   - Utilice ProxyDroid (solo root). Aunque es una aplicación antigua, todavía funciona muy bien. ProxyDroid usa iptables para redirigir con fuerza el tráfico a su proxy.
