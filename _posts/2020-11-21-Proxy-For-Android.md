@@ -2,7 +2,7 @@
 layout: post
 title:  "Guia para Interceptar trafico de aplicaciones Android"
 description: "Aprende hacking moderno enfocado a entornos mobiles"
-date:   2020-11-27
+date:   2020-11-21
 image:  "img/android-proxy.png"
 tags:   [Android, Proxy, Pentesting, Security]
 ---
