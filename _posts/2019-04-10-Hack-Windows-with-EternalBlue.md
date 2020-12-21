@@ -168,3 +168,8 @@ msf5 exploit(windows/smb/ms17_010_eternalblue) > run
 <script id="asciicast-239838" src="https://asciinema.org/a/239838.js" async></script>
 
 In this way we can completely commit a computer with the Windows operating system, thanks to the exposed vulnerability.  
+
+
+### Tutorial Explicativo
+
+<iframe src="https://www.youtube.com/watch?v=sdQNFsUvsIw" frameborder="0" allowfullscreen></iframe>
