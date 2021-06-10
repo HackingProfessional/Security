@@ -15,9 +15,9 @@ author-avatar: img.jpg
 
 #-------------------------------
 # Contact links
-facebook:  https://facebook.com/Gerh002 # Add your Facebook handle
+facebook:  https://www.facebook.com/spartancybersec # Add your Facebook handle
 email:   "mailto:gerueda6@misena.edu.co" # Add your Facebook handle
-instagram: https://www.instagram.com/gerardo_rh97 # Add your Facebook handle
+instagram: https://www.instagram.com/spartan_cybersecurity/ # Add your Facebook handle
 
 
 #-------------------------------
@@ -38,8 +38,8 @@ defaults:
 social:
   name: Gerardo Eliasib
   links:
-    - https://facebook.com/Gerh002
-    - https://www.instagram.com/gerardo_rh97
+    - https://www.facebook.com/spartancybersec
+    - https://www.instagram.com/spartan_cybersecurity/
     - https://www.linkedin.com/in/gerh/
 
 #-------------------------------
