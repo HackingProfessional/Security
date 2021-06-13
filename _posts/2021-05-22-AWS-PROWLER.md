@@ -2,7 +2,7 @@
 layout: post
 title:  "Realizando auditorias de seguridad sobre AWS con prowler"
 description: "Aprende a realizar auditorias sobre entornos cloud de AWS"
-date:   2020-11-22
+date:   2021-05-22
 image:  "img/AWS-HACKED.jpg"
 tags:   [Cloud, AWS, Pentesting, Security]
 ---
